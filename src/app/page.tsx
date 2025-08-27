@@ -43,7 +43,7 @@ const softwareDevelopmentItems = [
     {
         icon: Smartphone,
         text: "Cross-Platform Expertise",
-        details: "We build applications that work seamlessly across all devices and platforms.\n- Unified Experience – Consistent look & feel everywhere\n- Multi-Device Ready – Websites, apps, and software for all platforms\n- Seamless Integration – Smooth data flow across devices\n- Wider Reach – Engage users on Android, iOS, and web"
+        details: "We build solutions that work seamlessly across web, mobile, and desktop.\n- Unified Experience – Consistent look & feel everywhere\n- Multi-Device Ready – Websites, apps, and software for all platforms\n- Seamless Integration – Smooth data flow across devices\n- Wider Reach – Engage users on Android, iOS, and web"
     },
     {
         icon: CheckCircle,
@@ -66,7 +66,7 @@ const itTrainingItems = [
     {
         icon: Code,
         text: "100% Practical-Oriented Training",
-        details: "We focus on hands-on learning, not just theory. Our curriculum is packed with practical exercises, real-world case studies, and assignments that mirror the challenges you'll face in a professional IT environment, ensuring you build tangible skills."
+        details: "Hands-on training with real projects to turn knowledge into skills.\n- Live Projects – Work on industry-based case studies\n- Do & Learn – Focus on practice, not just theory\n- Problem-Solving – Real coding challenges & scenarios\n- Job-Ready Skills – Learn what companies actually need"
     },
     {
         icon: Star,
@@ -273,5 +273,7 @@ export default function Home() {
     </div>
   );
 }
+
+    
 
     
