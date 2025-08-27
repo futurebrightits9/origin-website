@@ -61,7 +61,7 @@ const itTrainingItems = [
     {
         icon: Users,
         text: "Experienced Trainers from IT Industry",
-        details: "Learn from the best in the business. Our trainers are seasoned IT professionals with years of real-world experience in leading tech companies. They bring practical insights and up-to-date knowledge directly from the industry to the classroom."
+        details: "Learn from professionals who bring real-world IT expertise to the classroom.\n- Industry Experts – Trainers with proven IT experience\n- Practical Knowledge – Skills gained from real projects\n- Career Guidance – Insights beyond textbooks\n- Mentorship – Personalized support for every learner"
     },
     {
         icon: Code,
@@ -221,10 +221,12 @@ export default function Home() {
                   <PopoverContent className="w-80 whitespace-pre-wrap">
                     <div className="grid gap-4">
                       <div className="space-y-2">
-                        <h4 className="font-medium leading-none">{item.text}</h4>
-                        <p className="text-sm text-muted-foreground">
-                          {item.details}
-                        </p>
+                        <div className="text-sm text-muted-foreground">
+                            <p className="text-foreground font-semibold">
+                              {item.details.split('\n')[0]}
+                            </p>
+                            <p>{item.details.split('\n').slice(1).join('\n')}</p>
+                          </div>
                       </div>
                     </div>
                   </PopoverContent>
