@@ -61,7 +61,7 @@ export default function Home() {
             Unlock Your Tech Potential
           </h1>
           <div className="h-14 flex items-center justify-center">
-            <p className="text-lg md:text-2xl text-accent transition-opacity duration-1000 ease-in-out">
+            <p className="text-lg md:text-2xl text-white transition-opacity duration-1000 ease-in-out">
               {taglines[currentTagline]}
             </p>
           </div>
