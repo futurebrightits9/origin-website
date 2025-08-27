@@ -15,6 +15,14 @@ const taglines = [
   "Training Tomorrow’s Tech Leaders Today."
 ];
 
+const heroImages = [
+    { src: "https://picsum.photos/1920/1080?random=11", hint: "software development" },
+    { src: "https://picsum.photos/1920/1080?random=12", hint: "data center" },
+    { src: "https://picsum.photos/1920/1080?random=13", hint: "cybersecurity" },
+    { src: "https://picsum.photos/1920/1080?random=14", hint: "team coding" },
+    { src: "https://picsum.photos/1920/1080?random=15", hint: "ai robotics" },
+];
+
 const softwareDevelopmentItems = [
   { icon: Layers, text: "Latest Technology Stack" },
   { icon: Palette, text: "User-Centric Designs" },
@@ -52,18 +60,33 @@ const upcomingEvents = [
 
 export default function Home() {
   const [currentTagline, setCurrentTagline] = useState(0);
+  const [currentHeroImage, setCurrentHeroImage] = useState(0);
 
   useEffect(() => {
-    const timer = setInterval(() => {
+    const taglineTimer = setInterval(() => {
       setCurrentTagline((prev) => (prev + 1) % taglines.length);
     }, 4000);
-    return () => clearInterval(timer);
+    const heroImageTimer = setInterval(() => {
+      setCurrentHeroImage((prev) => (prev + 1) % heroImages.length);
+    }, 2000);
+    return () => {
+        clearInterval(taglineTimer);
+        clearInterval(heroImageTimer);
+    };
   }, []);
 
   return (
     <div className="flex flex-col">
       <section className="relative h-[60vh] md:h-[80vh] w-full flex items-center justify-center text-center text-white">
-        <Image src="https://picsum.photos/1920/1080" data-ai-hint="technology education" layout="fill" objectFit="cover" alt="Hero background" className="absolute inset-0 z-0 brightness-50" />
+        <Image 
+          key={currentHeroImage}
+          src={heroImages[currentHeroImage].src} 
+          data-ai-hint={heroImages[currentHeroImage].hint} 
+          layout="fill" 
+          objectFit="cover" 
+          alt="Hero background" 
+          className="absolute inset-0 z-0 brightness-50 animate-fade-in" 
+        />
         <div className="relative z-10 p-4">
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold font-headline mb-4 animate-fade-in-down">
             Unlock Your Tech Potential
@@ -172,3 +195,5 @@ export default function Home() {
     </div>
   );
 }
+
+    
