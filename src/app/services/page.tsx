@@ -8,7 +8,7 @@ const trainingPrograms = [
   { title: "Generative AI (GenAI)", description: "Explore the power of Generative AI to create text, images, and smart applications. Learn prompt engineering, model integration, and real-world use cases to build next-gen AI solutions." },
   { title: "DevOps", description: "Our DevOps course equips learners to seamlessly integrate development and operations. It offers hands-on training in automation, CI/CD pipelines, and deployment strategies. With real-world projects, students gain practical expertise to deliver software faster, reliably, and efficiently." },
   { title: "Data Structures & Algorithms (DSA)", description: "We are providing training in Python with Django, Generative AI, DevOps, and Data Structures & Algorithms (DSA) to help students build strong technical skills." },
-  { title: "Data Science", description: "Data analysis, machine learning, and visualization." },
+  { title: "Data Science", description: "Our Data Science course empowers learners to extract insights from complex data. It provides hands-on training in Python, SQL, machine learning, and data visualization. With real-world projects, students develop the skills to make data-driven decisions efficiently and effectively." },
   { title: "Prompt Engineering", description: "Mastering prompts for AI tools to maximize productivity." },
 ];
 
@@ -83,7 +83,7 @@ export default function ServicesPage() {
                 </div>
             </div>
              <div className="mt-8 flex justify-start">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     {/* UI/UX Design Card */}
                     <div className="bg-card p-6 rounded-lg shadow-sm hover:shadow-lg transition-shadow duration-300">
                         <div className="flex items-center gap-4 mb-4">
