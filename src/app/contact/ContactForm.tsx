@@ -20,7 +20,7 @@ const formSchema = z.object({
   name: z.string().min(2, "Name must be at least 2 characters."),
   gmail: z.string().email("Please enter a valid email address."),
   contactNumber: z.string().min(10, "Please enter a valid 10-digit contact number.").max(15),
-  purpose: z.enum(['Development Work', 'Training Purpose']),
+  purpose: z.enum(['Development Work', 'Training']),
   courseInterestedIn: z.enum(['Python', 'GenAI', 'DevOps', 'DSA', 'Data Science', 'Soft Skills']),
   messageQuery: z.string().min(10, "Message must be at least 10 characters.").max(500, "Message must not exceed 500 characters."),
 });
@@ -52,7 +52,7 @@ export function ContactForm() {
       name: "",
       gmail: "",
       contactNumber: "",
-      purpose: "Training Purpose",
+      purpose: "Training",
       courseInterestedIn: "Python",
       messageQuery: "",
     },
@@ -139,7 +139,7 @@ export function ContactForm() {
                 </FormControl>
                 <SelectContent>
                   <SelectItem value="Development Work">Development Work</SelectItem>
-                  <SelectItem value="Training Purpose">Training Purpose</SelectItem>
+                  <SelectItem value="Training">Training</SelectItem>
                 </SelectContent>
               </Select>
               <FormMessage />

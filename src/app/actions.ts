@@ -8,7 +8,7 @@ const formSchema = z.object({
   candidateName: z.string().min(2, "Name must be at least 2 characters."),
   candidateGmail: z.string().email("Please enter a valid email address."),
   candidateContactNumber: z.string().min(10, "Please enter a valid 10-digit contact number.").max(15),
-  purpose: z.enum(['Development Work', 'Training Purpose']),
+  purpose: z.enum(['Development Work', 'Training']),
   courseInterestedIn: z.enum(['Python', 'GenAI', 'DevOps', 'DSA', 'Data Science', 'Soft Skills']),
   messageQuery: z.string().min(10, "Message must be at least 10 characters.").max(500, "Message must not exceed 500 characters."),
 });
