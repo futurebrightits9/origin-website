@@ -179,9 +179,18 @@ export default function Home() {
                     <div className="grid gap-4">
                       <div className="space-y-2">
                         <h4 className="font-medium leading-none">{item.text}</h4>
-                        <p className="text-sm text-muted-foreground">
-                          {item.details}
-                        </p>
+                        {item.text === "Latest Technology Stack" ? (
+                          <div className="text-sm text-muted-foreground">
+                            <p className="text-foreground font-semibold">
+                              {item.details.split('\n')[0]}
+                            </p>
+                            <p>{item.details.split('\n').slice(1).join('\n')}</p>
+                          </div>
+                        ) : (
+                          <p className="text-sm text-muted-foreground">
+                            {item.details}
+                          </p>
+                        )}
                       </div>
                     </div>
                   </PopoverContent>
