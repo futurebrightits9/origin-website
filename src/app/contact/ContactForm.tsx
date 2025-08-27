@@ -17,9 +17,9 @@ import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "
 import { Loader2 } from 'lucide-react';
 
 const formSchema = z.object({
-  candidateName: z.string().min(2, "Name must be at least 2 characters."),
-  candidateGmail: z.string().email("Please enter a valid email address."),
-  candidateContactNumber: z.string().min(10, "Please enter a valid 10-digit contact number.").max(15),
+  name: z.string().min(2, "Name must be at least 2 characters."),
+  gmail: z.string().email("Please enter a valid email address."),
+  contactNumber: z.string().min(10, "Please enter a valid 10-digit contact number.").max(15),
   purpose: z.enum(['Development Work', 'Training Purpose']),
   courseInterestedIn: z.enum(['Python', 'GenAI', 'DevOps', 'DSA', 'Data Science', 'Soft Skills']),
   messageQuery: z.string().min(10, "Message must be at least 10 characters.").max(500, "Message must not exceed 500 characters."),
@@ -37,7 +37,7 @@ function SubmitButton() {
           Generating Path...
         </>
       ) : (
-        "Register Now to Kickstart Your Career 🚀"
+        "Submit"
       )}
     </Button>
   );
@@ -49,9 +49,9 @@ export function ContactForm() {
   const form = useForm<FormValues>({
     resolver: zodResolver(formSchema),
     defaultValues: {
-      candidateName: "",
-      candidateGmail: "",
-      candidateContactNumber: "",
+      name: "",
+      gmail: "",
+      contactNumber: "",
       purpose: "Training Purpose",
       courseInterestedIn: "Python",
       messageQuery: "",
@@ -59,7 +59,21 @@ export function ContactForm() {
   });
 
   const action: (formData: FormData) => Promise<void> = async (formData) => {
-    const result = await generateLearningPathAction(formData);
+    const rawFormData = {
+      candidateName: formData.get('name'),
+      candidateGmail: formData.get('gmail'),
+      candidateContactNumber: formData.get('contactNumber'),
+      purpose: formData.get('purpose'),
+      courseInterestedIn: formData.get('courseInterestedIn'),
+      messageQuery: formData.get('messageQuery'),
+    };
+    
+    const result = await generateLearningPathAction(Object.entries(rawFormData).reduce((acc, [key, value]) => {
+        if (value) {
+            acc.append(key, value as string);
+        }
+        return acc;
+    }, new FormData()));
     if (result?.error) {
       toast({
         variant: "destructive",
@@ -74,7 +88,7 @@ export function ContactForm() {
       <form action={action} className="space-y-6">
         <FormField
           control={form.control}
-          name="candidateName"
+          name="name"
           render={({ field }) => (
             <FormItem>
               <FormLabel>Name</FormLabel>
@@ -87,7 +101,7 @@ export function ContactForm() {
         />
         <FormField
           control={form.control}
-          name="candidateGmail"
+          name="gmail"
           render={({ field }) => (
             <FormItem>
               <FormLabel>Gmail</FormLabel>
@@ -100,7 +114,7 @@ export function ContactForm() {
         />
         <FormField
           control={form.control}
-          name="candidateContactNumber"
+          name="contactNumber"
           render={({ field }) => (
             <FormItem>
               <FormLabel>Contact Number</FormLabel>
