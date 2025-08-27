@@ -48,13 +48,13 @@ export function Footer() {
               ))}
             </div>
             <div className="mt-4 text-sm text-muted-foreground">
-              <p>contact@techroute.academy</p>
+              <p>contact@futurebright.com</p>
               <p>Pune, India</p>
             </div>
           </div>
         </div>
         <div className="mt-8 border-t pt-4 text-center text-sm text-muted-foreground">
-          <p>&copy; {new Date().getFullYear()} TechRoute Academy. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} FutureBright IT Solutions Pvt. Ltd. All rights reserved.</p>
         </div>
       </div>
     </footer>

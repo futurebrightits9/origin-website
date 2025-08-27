@@ -40,11 +40,11 @@ const itTrainingItems = [
 ];
 
 const successStories = [
-  { name: "Priya Sharma", story: "Thanks to TechRoute, I landed my dream job at a top MNC. The practical training was invaluable!", company: "Innovate Inc." },
+  { name: "Priya Sharma", story: "Thanks to FutureBright IT Solutions, I landed my dream job at a top MNC. The practical training was invaluable!", company: "Innovate Inc." },
   { name: "Rahul Verma", story: "The DSA course was a game-changer. I cracked multiple interviews and got a great offer.", company: "Tech Solutions" },
   { name: "Anjali Singh", story: "The soft skills training helped me immensely in presenting myself confidently during interviews.", company: "Future Corp" },
   { name: "Suresh Gupta", story: "The GenAI course opened up a whole new career path for me. I'm now working on cutting-edge AI projects.", company: "Data Dynamics" },
-  { name: "Meera Desai", story: "I always struggled with DevOps concepts, but the hands-on projects at TechRoute made everything clear. Now I'm a confident DevOps Engineer.", company: "CloudNet" },
+  { name: "Meera Desai", story: "I always struggled with DevOps concepts, but the hands-on projects at FutureBright IT Solutions made everything clear. Now I'm a confident DevOps Engineer.", company: "CloudNet" },
 ];
 
 const galleryImages = [

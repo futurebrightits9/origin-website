@@ -21,8 +21,8 @@ export default function ContactPage() {
               </div>
               <div>
                 <h3 className="font-semibold text-lg">Email</h3>
-                <p className="text-muted-foreground">contact@techroute.academy</p>
-                <a href="mailto:contact@techroute.academy" className="text-primary hover:underline">Send an email</a>
+                <p className="text-muted-foreground">contact@futurebright.com</p>
+                <a href="mailto:contact@futurebright.com" className="text-primary hover:underline">Send an email</a>
               </div>
             </div>
             <div className="flex items-start gap-4">

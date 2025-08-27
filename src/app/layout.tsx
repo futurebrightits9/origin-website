@@ -6,7 +6,7 @@ import { Footer } from '@/components/Footer';
 import { Toaster } from "@/components/ui/toaster"
 
 export const metadata: Metadata = {
-  title: 'TechRoute Academy',
+  title: 'FutureBright IT Solutions Pvt. Ltd.',
   description: 'Empowering Students with Technology, Training & Transformation.',
 };
 
