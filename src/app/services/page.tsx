@@ -9,7 +9,7 @@ const trainingPrograms = [
   { title: "DevOps", description: "Our DevOps course equips learners to seamlessly integrate development and operations. It offers hands-on training in automation, CI/CD pipelines, and deployment strategies. With real-world projects, students gain practical expertise to deliver software faster, reliably, and efficiently." },
   { title: "Data Structures & Algorithms (DSA)", description: "We are providing training in Python with Django, Generative AI, DevOps, and Data Structures & Algorithms (DSA) to help students build strong technical skills." },
   { title: "Data Science", description: "Our Data Science course empowers learners to extract insights from complex data. It provides hands-on training in Python, SQL, machine learning, and data visualization. With real-world projects, students develop the skills to make data-driven decisions efficiently and effectively." },
-  { title: "Prompt Engineering", description: "Mastering prompts for AI tools to maximize productivity." },
+  { title: "Prompt Engineering", description: "Our Prompt Engineering course trains learners to design effective prompts for AI models. It offers hands-on practice in crafting, testing, and optimizing prompts for various AI applications. With real-world projects, students gain the skills to harness AI efficiently and creatively." },
 ];
 
 const softSkills = ["Communication skills", "Public speaking", "Resume & interview preparation", "Corporate etiquette"];
