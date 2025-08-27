@@ -123,7 +123,7 @@ export default function ServicesPage() {
         </div>
         
         <div className="w-full">
-          <h2 className="text-2xl font-headline font-bold text-center mb-8">🎓 Training Programs</h2>
+          <h2 className="text-2xl font-headline font-bold text-center mb-8">Training Programs</h2>
           <Accordion type="single" collapsible className="w-full space-y-4">
             {trainingPrograms.map((program, index) => (
               <AccordionItem value={`item-${index}`} key={program.title} className="bg-card border-none rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300">
@@ -138,10 +138,10 @@ export default function ServicesPage() {
           </Accordion>
         </div>
 
-        <div className="w-full max-w-4xl mx-auto mt-16">
+        <div className="w-full mt-16">
           <Accordion type="single" collapsible>
             <AccordionItem value="item-2">
-              <AccordionTrigger className="text-2xl font-headline font-bold">🧑‍💼 Soft Skills Development</AccordionTrigger>
+              <AccordionTrigger className="text-2xl font-headline font-bold">Soft Skills Development</AccordionTrigger>
               <AccordionContent>
                 <ul className="space-y-3 pt-4 pl-2">
                   {softSkills.map(skill => (
@@ -155,7 +155,7 @@ export default function ServicesPage() {
             </AccordionItem>
 
             <AccordionItem value="item-3">
-              <AccordionTrigger className="text-2xl font-headline font-bold">🔎 Job Preparation & Placement</AccordionTrigger>
+              <AccordionTrigger className="text-2xl font-headline font-bold">Job Preparation & Placement</AccordionTrigger>
               <AccordionContent>
                  <ul className="space-y-3 pt-4 pl-2">
                   {jobPrep.map(prep => (
