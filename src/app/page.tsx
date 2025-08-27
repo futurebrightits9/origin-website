@@ -16,11 +16,11 @@ const taglines = [
 ];
 
 const heroImages = [
-  { src: "https://picsum.photos/1920/1080?random=20", hint: "success motivation" },
-  { src: "https://picsum.photos/1920/1080?random=21", hint: "tech workspace" },
-  { src: "https://picsum.photos/1920/1080?random=22", hint: "focused developer" },
-  { src: "https://picsum.photos/1920/1080?random=23", hint: "team achievement" },
-  { src: "https://picsum.photos/1920/1080?random=24", hint: "innovative technology" },
+  { src: "https://picsum.photos/1920/1080?random=25", hint: "working employee" },
+  { src: "https://picsum.photos/1920/1080?random=26", hint: "studying students" },
+  { src: "https://picsum.photos/1920/1080?random=27", hint: "computer background" },
+  { src: "https://picsum.photos/1920/1080?random=28", hint: "tech office" },
+  { src: "https://picsum.photos/1920/1080?random=29", hint: "developer coding" },
 ];
 
 const softwareDevelopmentItems = [
