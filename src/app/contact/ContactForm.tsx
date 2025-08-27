@@ -1,3 +1,4 @@
+
 "use client";
 
 import { useForm } from 'react-hook-form';
@@ -74,7 +75,7 @@ export function ContactForm() {
           name="candidateName"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Candidate Name</FormLabel>
+              <FormLabel>Name</FormLabel>
               <FormControl>
                 <Input placeholder="e.g. John Doe" {...field} />
               </FormControl>
