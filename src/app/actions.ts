@@ -24,7 +24,7 @@ export async function generateLearningPathAction(formData: FormData) {
   const validationResult = formSchema.safeParse({
     name: rawFormData.candidateName,
     gmail: rawFormData.candidateGmail,
-    contactNumber: rawFormData.candidateContactNumber,
+    contactNumber: rawFormData.contactNumber,
     courseInterestedIn: rawFormData.courseInterestedIn,
     messageQuery: rawFormData.messageQuery,
   });
@@ -38,7 +38,7 @@ export async function generateLearningPathAction(formData: FormData) {
     candidateName: validationResult.data.name,
     candidateGmail: validationResult.data.gmail,
     candidateContactNumber: validationResult.data.contactNumber,
-    purpose: "Training", // Always "Training" now
+    purpose: "Training", // This is still required by the flow, but not on the form
     courseInterestedIn: validationResult.data.courseInterestedIn,
     messageQuery: validationResult.data.messageQuery,
   };
