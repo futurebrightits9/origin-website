@@ -58,7 +58,7 @@ export default function ServicesPage() {
                   </li>
               </ul>
             </div>
-            <div className="relative h-96 w-full flex items-center justify-center">
+            <div className="relative h-80 lg:h-96 w-full flex items-center justify-center">
                 <div className="absolute w-full h-full bg-accent/20 rounded-[30%_70%_70%_30%_/_30%_30%_70%_70%] rotate-12 animate-pulse" />
                 <Image
                   src="https://picsum.photos/800/600?random=16"
