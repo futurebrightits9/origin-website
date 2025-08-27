@@ -53,7 +53,7 @@ const softwareDevelopmentItems = [
     {
         icon: DollarSign,
         text: "Affordable & Transparent Pricing",
-        details: "We believe in providing top-tier services without the exorbitant price tag. Our pricing is competitive, transparent, and tailored to your specific needs and budget. We provide detailed project proposals with no hidden costs, ensuring a trustworthy partnership."
+        details: "We deliver high-quality solutions at fair prices with no hidden costs.\n- Cost-Effective – Value-driven services within budget\n- Clear Estimates – Upfront pricing, no surprises\n- Flexible Plans – Options for startups to enterprises\n- Maximum ROI – Quality solutions that pay off"
     },
 ];
 
@@ -178,7 +178,7 @@ export default function Home() {
                   <PopoverContent className="w-80 whitespace-pre-wrap">
                     <div className="grid gap-4">
                       <div className="space-y-2">
-                        {item.text === "Latest Technology Stack" || item.text === "User-Centric Designs" || item.text === "Cross-Platform Expertise" || item.text === "Quality Assurance & Testing" ? (
+                        {item.text === "Latest Technology Stack" || item.text === "User-Centric Designs" || item.text === "Cross-Platform Expertise" || item.text === "Quality Assurance & Testing" || item.text === "Affordable & Transparent Pricing" ? (
                           <div className="text-sm text-muted-foreground">
                             <p className="text-foreground font-semibold">
                               {item.details.split('\n')[0]}
