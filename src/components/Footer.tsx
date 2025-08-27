@@ -48,7 +48,7 @@ export function Footer() {
               ))}
             </div>
             <div className="mt-4 text-sm text-muted-foreground">
-              <p>contact@futurebright.com</p>
+              <p>futurebrightits9@gmail.com</p>
               <p>Pune, India</p>
             </div>
           </div>
