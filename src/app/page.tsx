@@ -48,7 +48,7 @@ const softwareDevelopmentItems = [
     {
         icon: CheckCircle,
         text: "Quality Assurance & Testing",
-        details: "Quality is non-negotiable. Our dedicated QA team performs rigorous testing at every stage of the development lifecycle to ensure your product is bug-free, secure, and performs flawlessly under all conditions. We employ both manual and automated testing techniques."
+        details: "We ensure every project is reliable, bug-free, and performance-optimized through rigorous testing.\n- Comprehensive Testing – Functional, performance & security checks\n- Bug-Free Delivery – Detect & fix issues before launch\n- High Reliability – Stable systems that users can trust\n- Continuous QA – Ongoing monitoring & improvements"
     },
     {
         icon: DollarSign,
@@ -178,7 +178,7 @@ export default function Home() {
                   <PopoverContent className="w-80 whitespace-pre-wrap">
                     <div className="grid gap-4">
                       <div className="space-y-2">
-                        {item.text === "Latest Technology Stack" || item.text === "User-Centric Designs" || item.text === "Cross-Platform Expertise" ? (
+                        {item.text === "Latest Technology Stack" || item.text === "User-Centric Designs" || item.text === "Cross-Platform Expertise" || item.text === "Quality Assurance & Testing" ? (
                           <div className="text-sm text-muted-foreground">
                             <p className="text-foreground font-semibold">
                               {item.details.split('\n')[0]}
@@ -271,3 +271,5 @@ export default function Home() {
     </div>
   );
 }
+
+    
