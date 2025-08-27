@@ -1,3 +1,4 @@
+
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 import { Check, Code, Globe, Smartphone, BarChart, PenTool } from 'lucide-react';
@@ -6,7 +7,7 @@ const trainingPrograms = [
   { title: "Python Development", description: "Learn how to build powerful and dynamic web applications using Python and Django. This training covers Python basics, Django framework, database handling, authentication, and project deployment — helping you create real-world websites and apps with ease." },
   { title: "Generative AI (GenAI)", description: "Explore the power of Generative AI to create text, images, and smart applications. Learn prompt engineering, model integration, and real-world use cases to build next-gen AI solutions." },
   { title: "DevOps", description: "DevOps bridges development and operations to deliver software faster and more reliably. It automates workflows, testing, and deployments, ensuring seamless collaboration across teams. With continuous integration and delivery, businesses achieve scalability, efficiency, and reduced downtime." },
-  { title: "Data Structures & Algorithms (DSA)", description: "Problem-solving skills to crack coding interviews." },
+  { title: "Data Structures & Algorithms (DSA)", description: "We are providing training in Python with Django, Generative AI, DevOps, and Data Structures & Algorithms (DSA) to help students build strong technical skills." },
   { title: "Data Science", description: "Data analysis, machine learning, and visualization." },
   { title: "Prompt Engineering", description: "Mastering prompts for AI tools to maximize productivity." },
 ];
@@ -139,11 +140,11 @@ export default function ServicesPage() {
         </div>
 
         <div className="w-full mt-16">
-          <Accordion type="single" collapsible>
-            <AccordionItem value="item-2">
-              <AccordionTrigger className="text-2xl font-headline font-bold">Soft Skills Development</AccordionTrigger>
+          <Accordion type="single" collapsible className="w-full space-y-4">
+            <AccordionItem value="item-2" className="bg-card border-none rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300">
+              <AccordionTrigger className="text-2xl font-headline font-bold px-6 py-4 hover:no-underline">Soft Skills Development</AccordionTrigger>
               <AccordionContent>
-                <ul className="space-y-3 pt-4 pl-2">
+                <ul className="space-y-3 pt-4 pl-6">
                   {softSkills.map(skill => (
                     <li key={skill} className="flex items-center text-lg">
                       <Check className="h-6 w-6 text-green-500 mr-3 shrink-0" />
@@ -154,10 +155,10 @@ export default function ServicesPage() {
               </AccordionContent>
             </AccordionItem>
 
-            <AccordionItem value="item-3">
-              <AccordionTrigger className="text-2xl font-headline font-bold">Job Preparation & Placement</AccordionTrigger>
+            <AccordionItem value="item-3" className="bg-card border-none rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300">
+              <AccordionTrigger className="text-2xl font-headline font-bold px-6 py-4 hover:no-underline">Job Preparation & Placement</AccordionTrigger>
               <AccordionContent>
-                 <ul className="space-y-3 pt-4 pl-2">
+                 <ul className="space-y-3 pt-4 pl-6">
                   {jobPrep.map(prep => (
                     <li key={prep} className="flex items-center text-lg">
                       <Check className="h-6 w-6 text-green-500 mr-3 shrink-0" />
