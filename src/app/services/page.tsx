@@ -28,7 +28,7 @@ export default function ServicesPage() {
         </div>
 
         <div className="mb-24">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div className="grid grid-cols-1 gap-12 items-center">
             <div className="space-y-6">
               <div className="flex items-center gap-4">
                  <div className="bg-primary/10 p-3 rounded-full">
@@ -57,17 +57,6 @@ export default function ServicesPage() {
                     <span>End-to-end development and support.</span>
                   </li>
               </ul>
-            </div>
-            <div className="relative h-96 w-full flex items-center justify-center">
-                <div className="absolute w-full h-full bg-accent/20 rounded-[30%_70%_70%_30%_/_30%_30%_70%_70%] rotate-12 animate-pulse" />
-                <Image
-                  src="https://picsum.photos/800/600?random=16"
-                  data-ai-hint="software development"
-                  alt="Custom Software Development"
-                  layout="fill"
-                  objectFit="contain"
-                  className="rounded-2xl shadow-2xl relative z-10"
-                />
             </div>
           </div>
         </div>
