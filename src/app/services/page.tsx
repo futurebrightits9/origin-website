@@ -58,15 +58,15 @@ export default function ServicesPage() {
                   </li>
               </ul>
             </div>
-            <div className="relative h-80 lg:h-96 w-full flex items-center justify-center">
+            <div className="relative h-96 w-full flex items-center justify-center">
                 <div className="absolute w-full h-full bg-accent/20 rounded-[30%_70%_70%_30%_/_30%_30%_70%_70%] rotate-12 animate-pulse" />
                 <Image
                   src="https://picsum.photos/800/600?random=16"
                   data-ai-hint="software development"
                   alt="Custom Software Development"
-                  width={800}
-                  height={600}
-                  className="rounded-2xl object-cover shadow-2xl relative z-10 w-5/6 h-auto"
+                  layout="fill"
+                  objectFit="contain"
+                  className="rounded-2xl shadow-2xl relative z-10"
                 />
             </div>
           </div>
@@ -104,15 +104,15 @@ export default function ServicesPage() {
               </ul>
             </AccordionContent>
           </AccordionItem>
-          
+
           <AccordionItem value="item-3">
             <AccordionTrigger className="text-2xl font-headline font-bold">🔎 Job Preparation & Placement</AccordionTrigger>
             <AccordionContent>
-              <ul className="space-y-3 pt-4 pl-2">
-                {jobPrep.map(item => (
-                  <li key={item} className="flex items-center text-lg">
+               <ul className="space-y-3 pt-4 pl-2">
+                {jobPrep.map(prep => (
+                  <li key={prep} className="flex items-center text-lg">
                     <Check className="h-6 w-6 text-green-500 mr-3 shrink-0" />
-                    <span>{item}</span>
+                    <span>{prep}</span>
                   </li>
                 ))}
               </ul>
