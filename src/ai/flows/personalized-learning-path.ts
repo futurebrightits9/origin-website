@@ -12,9 +12,10 @@ import {ai} from '@/ai/genkit';
 import {z} from 'genkit';
 
 const PersonalizedLearningPathInputSchema = z.object({
-  candidateName: z.string().describe('The candidate\'s name.'),
-  candidateGmail: z.string().email().describe('The candidate\'s Gmail address.'),
-  candidateContactNumber: z.string().describe('The candidate\'s contact number.'),
+  candidateName: z.string().describe("The candidate's name."),
+  candidateGmail: z.string().email().describe("The candidate's Gmail address."),
+  candidateContactNumber: z.string().describe("The candidate's contact number."),
+  purpose: z.enum(['Development Work', 'Training Purpose']).describe('The purpose of the inquiry.'),
   courseInterestedIn: z.enum([
     'Python',
     'GenAI',
@@ -47,10 +48,13 @@ const prompt = ai.definePrompt({
   Candidate Name: {{{candidateName}}}
   Candidate Gmail: {{{candidateGmail}}}
   Candidate Contact Number: {{{candidateContactNumber}}}
+  Purpose: {{{purpose}}}
   Course Interested In: {{{courseInterestedIn}}}
   Message / Query: {{{messageQuery}}}
 
-  Consider their course interest and message to recommend a sequence of courses or learning activities that will help them achieve their goals. If no course is selected, or the message mentions career interests, recommend courses relevant to those career interests.
+  Consider their course interest, purpose, and message to recommend a sequence of courses or learning activities that will help them achieve their goals. 
+  If the purpose is "Development Work", provide a brief, courteous message acknowledging their interest and stating that our team will contact them shortly.
+  If the purpose is "Training Purpose", generate a learning path. If no course is selected, or the message mentions career interests, recommend courses relevant to those career interests.
 
   Format the learning path as a numbered list with a brief description of each step.
   `,config: {

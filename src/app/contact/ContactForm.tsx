@@ -20,6 +20,7 @@ const formSchema = z.object({
   candidateName: z.string().min(2, "Name must be at least 2 characters."),
   candidateGmail: z.string().email("Please enter a valid email address."),
   candidateContactNumber: z.string().min(10, "Please enter a valid 10-digit contact number.").max(15),
+  purpose: z.enum(['Development Work', 'Training Purpose']),
   courseInterestedIn: z.enum(['Python', 'GenAI', 'DevOps', 'DSA', 'Data Science', 'Soft Skills']),
   messageQuery: z.string().min(10, "Message must be at least 10 characters.").max(500, "Message must not exceed 500 characters."),
 });
@@ -51,6 +52,7 @@ export function ContactForm() {
       candidateName: "",
       candidateGmail: "",
       candidateContactNumber: "",
+      purpose: "Training Purpose",
       courseInterestedIn: "Python",
       messageQuery: "",
     },
@@ -105,6 +107,27 @@ export function ContactForm() {
               <FormControl>
                 <Input placeholder="e.g. 9876543210" {...field} />
               </FormControl>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
+        <FormField
+          control={form.control}
+          name="purpose"
+          render={({ field }) => (
+            <FormItem>
+              <FormLabel>Purpose</FormLabel>
+              <Select onValueChange={field.onChange} defaultValue={field.value}>
+                <FormControl>
+                  <SelectTrigger>
+                    <SelectValue placeholder="Select a purpose" />
+                  </SelectTrigger>
+                </FormControl>
+                <SelectContent>
+                  <SelectItem value="Development Work">Development Work</SelectItem>
+                  <SelectItem value="Training Purpose">Training Purpose</SelectItem>
+                </SelectContent>
+              </Select>
               <FormMessage />
             </FormItem>
           )}
