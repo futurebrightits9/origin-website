@@ -81,7 +81,7 @@ const itTrainingItems = [
     {
         icon: Star,
         text: "Placement Support",
-        details: "Our commitment extends to helping you secure your dream job. We offer dedicated placement support, connecting you with our network of partner companies and providing you with the resources and preparation needed to succeed in the competitive job market."
+        details: "We don’t just train you, we guide you till you get placed.\n- Interview Preparation – Mock sessions & HR rounds\n- Resume Building – Create industry-ready profiles\n- Job Referrals – Connections with top IT companies\n- Ongoing Support – Guidance until successful placement"
     },
 ];
 
