@@ -1,4 +1,3 @@
-
 import { ContactForm } from './ContactForm';
 import { Mail, Phone, MapPin, Code, Briefcase } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -20,12 +19,7 @@ export default function ContactPage() {
             </Link>
           </Button>
         </div>
-        <div className="text-center mb-16 pt-16">
-          <h1 className="text-4xl md:text-5xl font-bold font-headline mb-4">Get in Touch</h1>
-          <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto">
-            Register now to kickstart your career. We are here to help you on your journey. 🚀
-          </p>
-        </div>
+        <div className="pt-16"></div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
           <div className="space-y-8">
