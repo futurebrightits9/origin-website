@@ -19,6 +19,9 @@ export default function ContactPage() {
             </Link>
           </Button>
         </div>
+        <div className="text-center pt-16">
+          <h1 className="text-4xl md:text-5xl font-bold font-headline mb-4">Get in Touch</h1>
+        </div>
         <div className="pt-16"></div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
