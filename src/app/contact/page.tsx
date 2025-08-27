@@ -1,11 +1,26 @@
+
 import { ContactForm } from './ContactForm';
-import { Mail, Phone, MapPin } from 'lucide-react';
+import { Mail, Phone, MapPin, Code, Briefcase } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import Link from 'next/link';
 
 export default function ContactPage() {
   return (
     <div className="py-16 md:py-24">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
+      <div className="container mx-auto px-4 relative">
+        <div className="absolute top-0 right-4 flex gap-4">
+          <Button asChild variant="outline">
+            <Link href="#development-query">
+              <Code className="mr-2" /> For Development Work
+            </Link>
+          </Button>
+          <Button asChild>
+            <Link href="#training-query">
+              <Briefcase className="mr-2" /> For Training Purpose
+            </Link>
+          </Button>
+        </div>
+        <div className="text-center mb-16 pt-16">
           <h1 className="text-4xl md:text-5xl font-bold font-headline mb-4">Get in Touch</h1>
           <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto">
             Register now to kickstart your career. We are here to help you on your journey. 🚀
@@ -46,7 +61,7 @@ export default function ContactPage() {
             </div>
           </div>
           
-          <div className="bg-card p-8 rounded-lg shadow-xl">
+          <div id="training-query" className="bg-card p-8 rounded-lg shadow-xl">
              <h2 className="text-3xl font-bold font-headline mb-6">Get a Personalized Learning Path</h2>
             <ContactForm />
           </div>
