@@ -5,7 +5,6 @@ import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { z } from 'zod';
 import { useFormStatus } from 'react-dom';
-import { useEffect } from 'react';
 import { useToast } from "@/hooks/use-toast"
 
 import { generateLearningPathAction } from '@/app/actions';
@@ -43,7 +42,6 @@ function SubmitButton() {
   );
 }
 
-
 export function ContactForm() {
   const { toast } = useToast()
   const form = useForm<FormValues>({
@@ -58,22 +56,10 @@ export function ContactForm() {
     },
   });
 
-  const action: (formData: FormData) => Promise<void> = async (formData) => {
-    const rawFormData = {
-      candidateName: formData.get('name'),
-      candidateGmail: formData.get('gmail'),
-      candidateContactNumber: formData.get('contactNumber'),
-      purpose: formData.get('purpose'),
-      courseInterestedIn: formData.get('courseInterestedIn'),
-      messageQuery: formData.get('messageQuery'),
-    };
-    
-    const result = await generateLearningPathAction(Object.entries(rawFormData).reduce((acc, [key, value]) => {
-        if (value) {
-            acc.append(key, value as string);
-        }
-        return acc;
-    }, new FormData()));
+  const purpose = form.watch("purpose");
+
+  const action = async (formData: FormData) => {
+    const result = await generateLearningPathAction(formData);
     if (result?.error) {
       toast({
         variant: "destructive",
@@ -146,31 +132,33 @@ export function ContactForm() {
             </FormItem>
           )}
         />
-        <FormField
-          control={form.control}
-          name="courseInterestedIn"
-          render={({ field }) => (
-            <FormItem>
-              <FormLabel>Course Interested In</FormLabel>
-              <Select onValueChange={field.onChange} defaultValue={field.value}>
-                <FormControl>
-                  <SelectTrigger>
-                    <SelectValue placeholder="Select a course" />
-                  </SelectTrigger>
-                </FormControl>
-                <SelectContent>
-                  <SelectItem value="Python">Python</SelectItem>
-                  <SelectItem value="GenAI">GenAI</SelectItem>
-                  <SelectItem value="DevOps">DevOps</SelectItem>
-                  <SelectItem value="DSA">DSA</SelectItem>
-                  <SelectItem value="Data Science">Data Science</SelectItem>
-                  <SelectItem value="Soft Skills">Soft Skills</SelectItem>
-                </SelectContent>
-              </Select>
-              <FormMessage />
-            </FormItem>
-          )}
-        />
+        {purpose === 'Training' && (
+            <FormField
+              control={form.control}
+              name="courseInterestedIn"
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel>Course Interested In</FormLabel>
+                  <Select onValueChange={field.onChange} defaultValue={field.value}>
+                    <FormControl>
+                      <SelectTrigger>
+                        <SelectValue placeholder="Select a course" />
+                      </SelectTrigger>
+                    </FormControl>
+                    <SelectContent>
+                      <SelectItem value="Python">Python</SelectItem>
+                      <SelectItem value="GenAI">GenAI</SelectItem>
+                      <SelectItem value="DevOps">DevOps</SelectItem>
+                      <SelectItem value="DSA">DSA</SelectItem>
+                      <SelectItem value="Data Science">Data Science</SelectItem>
+                      <SelectItem value="Soft Skills">Soft Skills</SelectItem>
+                    </SelectContent>
+                  </Select>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+        )}
         <FormField
           control={form.control}
           name="messageQuery"
