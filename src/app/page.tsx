@@ -5,7 +5,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { CheckCircle, Users, Code, Star, Mic, BookOpen, Award, Calendar, Camera, Palette, Smartphone, Globe, Cog } from 'lucide-react';
+import { CheckCircle, Users, Code, Star, Mic, BookOpen, Award, Calendar, Camera, Palette, Smartphone, Globe, Cog, Search, DollarSign, Layers } from 'lucide-react';
 
 const taglines = [
   "Empowering Students with Technology, Training & Transformation.",
@@ -15,14 +15,12 @@ const taglines = [
   "Training Tomorrow’s Tech Leaders Today."
 ];
 
-const ourServices = [
-    { icon: Globe, text: "Creative Website Development" },
-    { icon: Cog, text: "Customized Software Solutions" },
-    { icon: Smartphone, text: "Innovative Android Applications" },
-    { icon: Palette, text: "Logo Design" },
-];
-
 const whyChooseUsItems = [
+  { icon: Layers, text: "Latest Technology Stack" },
+  { icon: Palette, text: "User-Centric Designs" },
+  { icon: Smartphone, text: "Cross-Platform Expertise" },
+  { icon: CheckCircle, text: "Quality Assurance & Testing" },
+  { icon: DollarSign, text: "Affordable & Transparent Pricing" },
   { icon: Users, text: "Experienced Trainers from IT Industry" },
   { icon: Code, text: "100% Practical-Oriented Training" },
   { icon: Award, text: "Career Guidance & Mock Interviews" },
@@ -78,25 +76,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="our-services" className="py-16 md:py-24 bg-background">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl md:text-4xl font-bold font-headline text-center mb-12">Our Services</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {ourServices.map((item, index) => (
-              <Card key={index} className="text-center p-4 hover:shadow-xl hover:-translate-y-2 transition-all duration-300">
-                <CardHeader className="flex flex-col items-center">
-                  <div className="bg-primary/10 p-3 rounded-full mb-3">
-                    <item.icon className="h-8 w-8 text-primary" />
-                  </div>
-                  <CardTitle className="font-headline text-lg">{item.text}</CardTitle>
-                </CardHeader>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section id="why-choose-us" className="py-16 md:py-24">
+      <section id="why-choose-us" className="py-16 md:py-24 bg-background">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl md:text-4xl font-bold font-headline text-center mb-12">Why Choose Us?</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
