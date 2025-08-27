@@ -41,7 +41,7 @@ export default function ContactPage() {
               </div>
               <div>
                 <h3 className="font-semibold text-lg">Address</h3>
-                <p className="text-muted-foreground">123 Tech Park, Innovation Hub, Pune, Maharashtra, 411057, India</p>
+                <p className="text-muted-foreground">123 Tech Park, Innovation Hub, Nashik, Maharashtra, 422001, India</p>
               </div>
             </div>
           </div>
