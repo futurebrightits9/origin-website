@@ -4,7 +4,7 @@ import { Check, Code, Globe, Smartphone, BarChart, PenTool } from 'lucide-react'
 
 const trainingPrograms = [
   { title: "Python Development", description: "Learn how to build powerful and dynamic web applications using Python and Django. This training covers Python basics, Django framework, database handling, authentication, and project deployment — helping you create real-world websites and apps with ease." },
-  { title: "Generative AI (GenAI)", description: "Hands-on with AI tools, ChatGPT, LLMs, and prompt engineering." },
+  { title: "Generative AI (GenAI)", description: "Explore the power of Generative AI to create text, images, and smart applications. Learn prompt engineering, model integration, and real-world use cases to build next-gen AI solutions." },
   { title: "DevOps", description: "CI/CD pipelines, Docker, Kubernetes, and cloud deployment." },
   { title: "Data Structures & Algorithms (DSA)", description: "Problem-solving skills to crack coding interviews." },
   { title: "Data Science", description: "Data analysis, machine learning, and visualization." },
