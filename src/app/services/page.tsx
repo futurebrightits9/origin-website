@@ -25,7 +25,7 @@ export default function ServicesPage() {
           </p>
         </div>
 
-        <div className="mb-24 flex justify-center">
+        <div className="mb-24">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {/* Custom Software Development Card */}
                 <div className="bg-card p-6 rounded-lg shadow-sm hover:shadow-lg transition-shadow duration-300">
@@ -80,9 +80,11 @@ export default function ServicesPage() {
                         <li className="flex items-center"><Check className="h-4 w-4 text-green-500 mr-2 shrink-0" />Scalable & secure backends.</li>
                     </ul>
                 </div>
-
+            </div>
+             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-8 justify-center">
+                <div className="lg:col-start-1 lg:col-span-1 md:col-start-1 md:col-span-1"></div>
                 {/* UI/UX Design Card */}
-                <div className="bg-card p-6 rounded-lg shadow-sm hover:shadow-lg transition-shadow duration-300">
+                <div className="bg-card p-6 rounded-lg shadow-sm hover:shadow-lg transition-shadow duration-300 lg:col-start-2 lg:col-span-1">
                     <div className="flex items-center gap-4 mb-4">
                         <div className="bg-primary/10 p-3 rounded-full">
                             <PenTool className="h-8 w-8 text-primary" />
@@ -119,53 +121,53 @@ export default function ServicesPage() {
             </div>
         </div>
         
-        <Accordion type="single" collapsible defaultValue="item-1" className="w-full max-w-4xl mx-auto">
-          <AccordionItem value="item-1">
-            <AccordionTrigger className="text-2xl font-headline font-bold">🎓 Training Programs</AccordionTrigger>
-            <AccordionContent>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 pt-4">
-                {trainingPrograms.map(program => (
-                  <Card key={program.title} className="hover:border-primary transition-colors">
-                    <CardHeader>
-                      <CardTitle className="font-headline text-xl">{program.title}</CardTitle>
-                    </CardHeader>
-                    <CardContent>
-                      <p className="text-muted-foreground">{program.description}</p>
-                    </CardContent>
-                  </Card>
-                ))}
-              </div>
-            </AccordionContent>
-          </AccordionItem>
+        <div className="w-full max-w-4xl mx-auto">
+          <h2 className="text-2xl font-headline font-bold text-center mb-8">🎓 Training Programs</h2>
+          <Accordion type="single" collapsible className="w-full space-y-4">
+            {trainingPrograms.map((program, index) => (
+              <AccordionItem value={`item-${index}`} key={program.title} className="bg-card border-none rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300">
+                <AccordionTrigger className="text-xl font-headline px-6 py-4 hover:no-underline">
+                  {program.title}
+                </AccordionTrigger>
+                <AccordionContent>
+                  <p className="text-muted-foreground px-6 pb-4">{program.description}</p>
+                </AccordionContent>
+              </AccordionItem>
+            ))}
+          </Accordion>
+        </div>
 
-          <AccordionItem value="item-2">
-            <AccordionTrigger className="text-2xl font-headline font-bold">🧑‍💼 Soft Skills Development</AccordionTrigger>
-            <AccordionContent>
-              <ul className="space-y-3 pt-4 pl-2">
-                {softSkills.map(skill => (
-                  <li key={skill} className="flex items-center text-lg">
-                    <Check className="h-6 w-6 text-green-500 mr-3 shrink-0" />
-                    <span>{skill}</span>
-                  </li>
-                ))}
-              </ul>
-            </AccordionContent>
-          </AccordionItem>
+        <div className="w-full max-w-4xl mx-auto mt-16">
+          <Accordion type="single" collapsible>
+            <AccordionItem value="item-2">
+              <AccordionTrigger className="text-2xl font-headline font-bold">🧑‍💼 Soft Skills Development</AccordionTrigger>
+              <AccordionContent>
+                <ul className="space-y-3 pt-4 pl-2">
+                  {softSkills.map(skill => (
+                    <li key={skill} className="flex items-center text-lg">
+                      <Check className="h-6 w-6 text-green-500 mr-3 shrink-0" />
+                      <span>{skill}</span>
+                    </li>
+                  ))}
+                </ul>
+              </AccordionContent>
+            </AccordionItem>
 
-          <AccordionItem value="item-3">
-            <AccordionTrigger className="text-2xl font-headline font-bold">🔎 Job Preparation & Placement</AccordionTrigger>
-            <AccordionContent>
-               <ul className="space-y-3 pt-4 pl-2">
-                {jobPrep.map(prep => (
-                  <li key={prep} className="flex items-center text-lg">
-                    <Check className="h-6 w-6 text-green-500 mr-3 shrink-0" />
-                    <span>{prep}</span>
-                  </li>
-                ))}
-              </ul>
-            </AccordionContent>
-          </AccordionItem>
-        </Accordion>
+            <AccordionItem value="item-3">
+              <AccordionTrigger className="text-2xl font-headline font-bold">🔎 Job Preparation & Placement</AccordionTrigger>
+              <AccordionContent>
+                 <ul className="space-y-3 pt-4 pl-2">
+                  {jobPrep.map(prep => (
+                    <li key={prep} className="flex items-center text-lg">
+                      <Check className="h-6 w-6 text-green-500 mr-3 shrink-0" />
+                      <span>{prep}</span>
+                    </li>
+                  ))}
+                </ul>
+              </AccordionContent>
+            </AccordionItem>
+          </Accordion>
+        </div>
       </div>
     </div>
   );
