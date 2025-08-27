@@ -178,7 +178,6 @@ export default function Home() {
                   <PopoverContent className="w-80 whitespace-pre-wrap">
                     <div className="grid gap-4">
                       <div className="space-y-2">
-                        <h4 className="font-medium leading-none">{item.text}</h4>
                         {item.text === "Latest Technology Stack" ? (
                           <div className="text-sm text-muted-foreground">
                             <p className="text-foreground font-semibold">
@@ -187,9 +186,12 @@ export default function Home() {
                             <p>{item.details.split('\n').slice(1).join('\n')}</p>
                           </div>
                         ) : (
-                          <p className="text-sm text-muted-foreground">
-                            {item.details}
-                          </p>
+                          <>
+                            <h4 className="font-medium leading-none">{item.text}</h4>
+                            <p className="text-sm text-muted-foreground">
+                              {item.details}
+                            </p>
+                          </>
                         )}
                       </div>
                     </div>
