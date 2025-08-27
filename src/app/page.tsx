@@ -15,12 +15,15 @@ const taglines = [
   "Training Tomorrow’s Tech Leaders Today."
 ];
 
-const whyChooseUsItems = [
+const softwareDevelopmentItems = [
   { icon: Layers, text: "Latest Technology Stack" },
   { icon: Palette, text: "User-Centric Designs" },
   { icon: Smartphone, text: "Cross-Platform Expertise" },
   { icon: CheckCircle, text: "Quality Assurance & Testing" },
   { icon: DollarSign, text: "Affordable & Transparent Pricing" },
+];
+
+const itTrainingItems = [
   { icon: Users, text: "Experienced Trainers from IT Industry" },
   { icon: Code, text: "100% Practical-Oriented Training" },
   { icon: Award, text: "Career Guidance & Mock Interviews" },
@@ -79,18 +82,39 @@ export default function Home() {
       <section id="why-choose-us" className="py-16 md:py-24 bg-background">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl md:text-4xl font-bold font-headline text-center mb-12">Why Choose Us?</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
-            {whyChooseUsItems.map((item, index) => (
-              <Card key={index} className="text-center p-4 hover:shadow-xl hover:-translate-y-2 transition-all duration-300">
-                <CardHeader className="flex flex-col items-center">
-                  <div className="bg-primary/10 p-3 rounded-full mb-3">
-                    <item.icon className="h-8 w-8 text-primary" />
-                  </div>
-                  <CardTitle className="font-headline text-lg leading-tight">{item.text}</CardTitle>
-                </CardHeader>
-              </Card>
-            ))}
+          
+          <div className="mb-12">
+            <h3 className="text-2xl font-bold text-center mb-6 text-foreground">For Software & Website Development</h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
+              {softwareDevelopmentItems.map((item, index) => (
+                <Card key={index} className="text-center p-4 hover:shadow-xl hover:-translate-y-2 transition-all duration-300">
+                  <CardHeader className="flex flex-col items-center">
+                    <div className="bg-primary/10 p-3 rounded-full mb-3">
+                      <item.icon className="h-8 w-8 text-primary" />
+                    </div>
+                    <CardTitle className="font-headline text-lg leading-tight">{item.text}</CardTitle>
+                  </CardHeader>
+                </Card>
+              ))}
+            </div>
           </div>
+          
+          <div>
+            <h3 className="text-2xl font-bold text-center mb-6 text-foreground">For IT Training</h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
+              {itTrainingItems.map((item, index) => (
+                <Card key={index} className="text-center p-4 hover:shadow-xl hover:-translate-y-2 transition-all duration-300">
+                  <CardHeader className="flex flex-col items-center">
+                    <div className="bg-primary/10 p-3 rounded-full mb-3">
+                      <item.icon className="h-8 w-8 text-primary" />
+                    </div>
+                    <CardTitle className="font-headline text-lg leading-tight">{item.text}</CardTitle>
+                  </CardHeader>
+                </Card>
+              ))}
+            </div>
+          </div>
+
         </div>
       </section>
 
