@@ -3,7 +3,7 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/
 import { Check, Code, Globe, Smartphone, BarChart, PenTool } from 'lucide-react';
 
 const trainingPrograms = [
-  { title: "Python Development", description: "Learn Python from basics to advanced with real-world projects." },
+  { title: "Python Development", description: "Learn how to build powerful and dynamic web applications using Python and Django. This training covers Python basics, Django framework, database handling, authentication, and project deployment — helping you create real-world websites and apps with ease." },
   { title: "Generative AI (GenAI)", description: "Hands-on with AI tools, ChatGPT, LLMs, and prompt engineering." },
   { title: "DevOps", description: "CI/CD pipelines, Docker, Kubernetes, and cloud deployment." },
   { title: "Data Structures & Algorithms (DSA)", description: "Problem-solving skills to crack coding interviews." },
