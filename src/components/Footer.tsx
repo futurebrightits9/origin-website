@@ -22,9 +22,6 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left">
           <div className="flex flex-col items-center md:items-start">
             <Logo />
-            <p className="mt-4 text-sm text-muted-foreground max-w-xs">
-              Training tomorrow’s tech leaders today.
-            </p>
           </div>
           <div>
             <h3 className="font-headline font-semibold mb-4">Quick Links</h3>
