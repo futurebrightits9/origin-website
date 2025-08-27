@@ -76,7 +76,7 @@ const itTrainingItems = [
     {
         icon: Code,
         text: "Hands-on Live Projects",
-        details: "Gain invaluable experience by working on live, industry-standard projects. This hands-on approach allows you to apply your skills in a real-world context, build a strong portfolio, and understand the complete software development lifecycle from start to finish."
+        details: "Learn by doing – work on real-time projects that build skills and confidence.\n- Real-World Applications – Gain practical exposure with industry projects\n- End-to-End Development – Understand complete project lifecycles\n- Team Collaboration – Experience working in a professional setup\n- Portfolio Ready – Showcase live projects to impress employers"
     },
     {
         icon: Star,
