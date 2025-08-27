@@ -1,3 +1,4 @@
+
 "use client";
 
 import { useState, useEffect } from 'react';
@@ -32,7 +33,7 @@ const softwareDevelopmentItems = [
     { 
         icon: Layers, 
         text: "Latest Technology Stack", 
-        details: "We leverage the most advanced and modern technologies to build robust, scalable, and future-ready solutions. Our team ensures that every website, software, or mobile app is developed using industry-leading tools, frameworks, and best practices, providing high performance, security, and seamless user experience. Technologies we work with include: Frontend: React.js. Backend: Python (Django). Mobile Apps: Flutter, React Native Databases: MySQL, PostgreSQL, MongoDB, Firebase Cloud & DevOps: AWS, Google Cloud, Docker, Kubernetes, CI/CD pipelines AI & Automation: Generative AI, ChatGPT integrations, Machine Learning models" 
+        details: "We leverage the most advanced and modern technologies to build robust, scalable, and future-ready solutions. \n\nOur team ensures that every website, software, or mobile app is developed using industry-leading tools, frameworks, and best practices, providing high performance, security, and seamless user experience. \n\nTechnologies we work with include: \n- Frontend: React.js. \n- Backend: Python (Django). \n- Mobile Apps: Flutter, React Native \n- Databases: MySQL, PostgreSQL, MongoDB, Firebase \n- Cloud & DevOps: AWS, Google Cloud, Docker, Kubernetes, CI/CD pipelines \n- AI & Automation: Generative AI, ChatGPT integrations, Machine Learning models" 
     },
     { 
         icon: Palette, 
@@ -90,6 +91,8 @@ const successStories = [
   { name: "Anjali Singh", story: "The soft skills training helped me immensely in presenting myself confidently during interviews.", company: "Future Corp" },
   { name: "Suresh Gupta", story: "The GenAI course opened up a whole new career path for me. I'm now working on cutting-edge AI projects.", company: "Data Dynamics" },
   { name: "Meera Desai", story: "I always struggled with DevOps concepts, but the hands-on projects at FutureBright IT Solutions Pvt. Ltd. made everything clear. Now I'm a confident DevOps Engineer.", company: "CloudNet" },
+  { name: "Rajesh Kumar", story: "The placement support was fantastic. They helped me build my resume and prepare for interviews, which led to a great job.", company: "InfoSystems" },
+  { name: "Sunita Patil", story: "The Python course was excellent. The projects were challenging and prepared me well for my developer role.", company: "CodeGenius" },
 ];
 
 const galleryImages = [
@@ -169,7 +172,7 @@ export default function Home() {
                       </CardHeader>
                     </Card>
                   </PopoverTrigger>
-                  <PopoverContent className="w-80">
+                  <PopoverContent className="w-80 whitespace-pre-wrap">
                     <div className="grid gap-4">
                       <div className="space-y-2">
                         <h4 className="font-medium leading-none">{item.text}</h4>
@@ -199,7 +202,7 @@ export default function Home() {
                       </CardHeader>
                     </Card>
                   </PopoverTrigger>
-                  <PopoverContent className="w-80">
+                  <PopoverContent className="w-80 whitespace-pre-wrap">
                     <div className="grid gap-4">
                       <div className="space-y-2">
                         <h4 className="font-medium leading-none">{item.text}</h4>
@@ -252,5 +255,3 @@ export default function Home() {
     </div>
   );
 }
-
-    
