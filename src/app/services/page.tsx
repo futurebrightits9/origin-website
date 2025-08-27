@@ -28,46 +28,34 @@ export default function ServicesPage() {
         </div>
 
         <div className="mb-24">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div className="space-y-6">
-              <div className="flex items-center gap-4">
-                 <div className="bg-primary/10 p-3 rounded-full">
-                    <Code className="h-8 w-8 text-primary" />
-                  </div>
-                <h2 className="text-3xl md:text-4xl font-bold font-headline">Custom Software Development</h2>
-              </div>
-              <p className="text-lg text-muted-foreground">
-                We build bespoke software solutions tailored to your unique business needs. From initial concept to final deployment, we create scalable, secure, and high-performance applications that drive growth and efficiency.
-              </p>
-              <ul className="space-y-3 pl-2">
-                 <li className="flex items-center text-lg">
-                    <Check className="h-6 w-6 text-green-500 mr-3 shrink-0" />
-                    <span>Tailored to your specific requirements.</span>
-                  </li>
-                  <li className="flex items-center text-lg">
-                    <Check className="h-6 w-6 text-green-500 mr-3 shrink-0" />
-                    <span>Built with modern, scalable technology.</span>
-                  </li>
-                  <li className="flex items-center text-lg">
-                    <Check className="h-6 w-6 text-green-500 mr-3 shrink-0" />
-                    <span>Focused on user-centric design and experience.</span>
-                  </li>
-                  <li className="flex items-center text-lg">
-                    <Check className="h-6 w-6 text-green-500 mr-3 shrink-0" />
-                    <span>End-to-end development and support.</span>
-                  </li>
-              </ul>
+          <div className="space-y-6">
+            <div className="flex items-center gap-4">
+                <div className="bg-primary/10 p-3 rounded-full">
+                  <Code className="h-8 w-8 text-primary" />
+                </div>
+              <h2 className="text-3xl md:text-4xl font-bold font-headline">Custom Software Development</h2>
             </div>
-            <div>
-              <Image 
-                src="https://storage.googleapis.com/aai-web-samples/custom-software-development.png" 
-                data-ai-hint="software development"
-                alt="Custom Software Development" 
-                width={600} 
-                height={500}
-                className="rounded-lg shadow-xl"
-              />
-            </div>
+            <p className="text-lg text-muted-foreground">
+              We build bespoke software solutions tailored to your unique business needs. From initial concept to final deployment, we create scalable, secure, and high-performance applications that drive growth and efficiency.
+            </p>
+            <ul className="space-y-3 pl-2">
+                <li className="flex items-center text-lg">
+                  <Check className="h-6 w-6 text-green-500 mr-3 shrink-0" />
+                  <span>Tailored to your specific requirements.</span>
+                </li>
+                <li className="flex items-center text-lg">
+                  <Check className="h-6 w-6 text-green-500 mr-3 shrink-0" />
+                  <span>Built with modern, scalable technology.</span>
+                </li>
+                <li className="flex items-center text-lg">
+                  <Check className="h-6 w-6 text-green-500 mr-3 shrink-0" />
+                  <span>Focused on user-centric design and experience.</span>
+                </li>
+                <li className="flex items-center text-lg">
+                  <Check className="h-6 w-6 text-green-500 mr-3 shrink-0" />
+                  <span>End-to-end development and support.</span>
+                </li>
+            </ul>
           </div>
         </div>
         
