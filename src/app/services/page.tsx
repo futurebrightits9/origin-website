@@ -80,11 +80,9 @@ export default function ServicesPage() {
                         <li className="flex items-center"><Check className="h-4 w-4 text-green-500 mr-2 shrink-0" />Scalable & secure backends.</li>
                     </ul>
                 </div>
-            </div>
-             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-8 justify-center">
-                <div className="lg:col-start-1 lg:col-span-1 md:col-start-1 md:col-span-1"></div>
+
                 {/* UI/UX Design Card */}
-                <div className="bg-card p-6 rounded-lg shadow-sm hover:shadow-lg transition-shadow duration-300 lg:col-start-2 lg:col-span-1">
+                <div className="bg-card p-6 rounded-lg shadow-sm hover:shadow-lg transition-shadow duration-300">
                     <div className="flex items-center gap-4 mb-4">
                         <div className="bg-primary/10 p-3 rounded-full">
                             <PenTool className="h-8 w-8 text-primary" />
