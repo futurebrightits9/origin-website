@@ -38,7 +38,7 @@ const softwareDevelopmentItems = [
     {
         icon: Palette,
         text: "User-Centric Designs",
-        details: "Our design philosophy places the user at the center of everything we do. We create intuitive, engaging, and aesthetically pleasing interfaces (UI/UX) that enhance user satisfaction and drive adoption. Every design is meticulously crafted to be both beautiful and functional."
+        details: "We create designs that put users first, ensuring every interaction is simple, engaging, and meaningful.\n- Intuitive UI/UX – Simple, clean, and easy-to-navigate interfaces\n- Responsive Layouts – Works seamlessly on mobile, tablet, and desktop\n- Engaging Visuals – Modern designs that attract and retain users\n- Accessibility First – Inclusive design for all types of users\n- Performance Optimized – Fast-loading pages with smooth interactions\n- User Feedback Driven – Designs improved through testing & real feedback"
     },
     {
         icon: Smartphone,
@@ -178,7 +178,7 @@ export default function Home() {
                   <PopoverContent className="w-80 whitespace-pre-wrap">
                     <div className="grid gap-4">
                       <div className="space-y-2">
-                        {item.text === "Latest Technology Stack" ? (
+                        {item.text === "Latest Technology Stack" || item.text === "User-Centric Designs" ? (
                           <div className="text-sm text-muted-foreground">
                             <p className="text-foreground font-semibold">
                               {item.details.split('\n')[0]}
@@ -271,3 +271,5 @@ export default function Home() {
     </div>
   );
 }
+
+    
