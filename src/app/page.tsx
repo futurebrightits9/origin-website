@@ -30,58 +30,58 @@ const heroImages = [
 ];
 
 const softwareDevelopmentItems = [
-    { 
-        icon: Layers, 
-        text: "Latest Technology Stack", 
-        details: "We leverage the most advanced and modern technologies to build robust, scalable, and future-ready solutions. \n\nOur team ensures that every website, software, or mobile app is developed using industry-leading tools, frameworks, and best practices, providing high performance, security, and seamless user experience. \n\nTechnologies we work with include: \n- Frontend: React.js. \n- Backend: Python (Django). \n- Mobile Apps: Flutter, React Native \n- Databases: MySQL, PostgreSQL, MongoDB, Firebase \n- Cloud & DevOps: AWS, Google Cloud, Docker, Kubernetes, CI/CD pipelines \n- AI & Automation: Generative AI, ChatGPT integrations, Machine Learning models" 
+    {
+        icon: Layers,
+        text: "Latest Technology Stack",
+        details: "We used below new Technology Stack for software or any website development.\n- Frontend: React.js\n- Backend: Python (Django)\n- Mobile Apps: Flutter, React Native\n- Databases: MySQL, PostgreSQL, MongoDB, Firebase\n- Cloud & DevOps: AWS, Google Cloud, Docker, - Kubernetes, CI/CD\n- AI & Automation: Generative AI, ChatGPT, Machine Learning"
     },
-    { 
-        icon: Palette, 
-        text: "User-Centric Designs", 
-        details: "Our design philosophy places the user at the center of everything we do. We create intuitive, engaging, and aesthetically pleasing interfaces (UI/UX) that enhance user satisfaction and drive adoption. Every design is meticulously crafted to be both beautiful and functional." 
+    {
+        icon: Palette,
+        text: "User-Centric Designs",
+        details: "Our design philosophy places the user at the center of everything we do. We create intuitive, engaging, and aesthetically pleasing interfaces (UI/UX) that enhance user satisfaction and drive adoption. Every design is meticulously crafted to be both beautiful and functional."
     },
-    { 
-        icon: Smartphone, 
-        text: "Cross-Platform Expertise", 
-        details: "We build applications that work seamlessly across all devices and platforms. Whether it's a responsive website or a mobile app for iOS and Android, our cross-platform development approach ensures a consistent and optimal experience for all users, maximizing your reach." 
+    {
+        icon: Smartphone,
+        text: "Cross-Platform Expertise",
+        details: "We build applications that work seamlessly across all devices and platforms. Whether it's a responsive website or a mobile app for iOS and Android, our cross-platform development approach ensures a consistent and optimal experience for all users, maximizing your reach."
     },
-    { 
-        icon: CheckCircle, 
-        text: "Quality Assurance & Testing", 
-        details: "Quality is non-negotiable. Our dedicated QA team performs rigorous testing at every stage of the development lifecycle to ensure your product is bug-free, secure, and performs flawlessly under all conditions. We employ both manual and automated testing techniques." 
+    {
+        icon: CheckCircle,
+        text: "Quality Assurance & Testing",
+        details: "Quality is non-negotiable. Our dedicated QA team performs rigorous testing at every stage of the development lifecycle to ensure your product is bug-free, secure, and performs flawlessly under all conditions. We employ both manual and automated testing techniques."
     },
-    { 
-        icon: DollarSign, 
-        text: "Affordable & Transparent Pricing", 
-        details: "We believe in providing top-tier services without the exorbitant price tag. Our pricing is competitive, transparent, and tailored to your specific needs and budget. We provide detailed project proposals with no hidden costs, ensuring a trustworthy partnership." 
+    {
+        icon: DollarSign,
+        text: "Affordable & Transparent Pricing",
+        details: "We believe in providing top-tier services without the exorbitant price tag. Our pricing is competitive, transparent, and tailored to your specific needs and budget. We provide detailed project proposals with no hidden costs, ensuring a trustworthy partnership."
     },
 ];
 
 const itTrainingItems = [
-    { 
-        icon: Users, 
-        text: "Experienced Trainers from IT Industry", 
-        details: "Learn from the best in the business. Our trainers are seasoned IT professionals with years of real-world experience in leading tech companies. They bring practical insights and up-to-date knowledge directly from the industry to the classroom." 
+    {
+        icon: Users,
+        text: "Experienced Trainers from IT Industry",
+        details: "Learn from the best in the business. Our trainers are seasoned IT professionals with years of real-world experience in leading tech companies. They bring practical insights and up-to-date knowledge directly from the industry to the classroom."
     },
-    { 
-        icon: Code, 
-        text: "100% Practical-Oriented Training", 
-        details: "We focus on hands-on learning, not just theory. Our curriculum is packed with practical exercises, real-world case studies, and assignments that mirror the challenges you'll face in a professional IT environment, ensuring you build tangible skills." 
+    {
+        icon: Code,
+        text: "100% Practical-Oriented Training",
+        details: "We focus on hands-on learning, not just theory. Our curriculum is packed with practical exercises, real-world case studies, and assignments that mirror the challenges you'll face in a professional IT environment, ensuring you build tangible skills."
     },
-    { 
-        icon: Star, 
-        text: "Career Guidance & Mock Interviews", 
-        details: "Your career success is our goal. We provide comprehensive career support, including personalized guidance, resume building workshops, and mock interviews conducted by industry experts to help you build confidence and ace your job applications." 
+    {
+        icon: Star,
+        text: "Career Guidance & Mock Interviews",
+        details: "Your career success is our goal. We provide comprehensive career support, including personalized guidance, resume building workshops, and mock interviews conducted by industry experts to help you build confidence and ace your job applications."
     },
-    { 
-        icon: Code, 
-        text: "Hands-on Live Projects", 
-        details: "Gain invaluable experience by working on live, industry-standard projects. This hands-on approach allows you to apply your skills in a real-world context, build a strong portfolio, and understand the complete software development lifecycle from start to finish." 
+    {
+        icon: Code,
+        text: "Hands-on Live Projects",
+        details: "Gain invaluable experience by working on live, industry-standard projects. This hands-on approach allows you to apply your skills in a real-world context, build a strong portfolio, and understand the complete software development lifecycle from start to finish."
     },
-    { 
-        icon: Star, 
-        text: "Placement Support", 
-        details: "Our commitment extends to helping you secure your dream job. We offer dedicated placement support, connecting you with our network of partner companies and providing you with the resources and preparation needed to succeed in the competitive job market." 
+    {
+        icon: Star,
+        text: "Placement Support",
+        details: "Our commitment extends to helping you secure your dream job. We offer dedicated placement support, connecting you with our network of partner companies and providing you with the resources and preparation needed to succeed in the competitive job market."
     },
 ];
 
@@ -130,14 +130,14 @@ export default function Home() {
   return (
     <div className="flex flex-col">
       <section className="relative h-[60vh] md:h-[80vh] w-full flex items-center justify-center text-center text-white">
-        <Image 
+        <Image
           key={currentHeroImage}
-          src={heroImages[currentHeroImage].src} 
-          data-ai-hint={heroImages[currentHeroImage].hint} 
-          layout="fill" 
-          objectFit="cover" 
-          alt="Hero background" 
-          className="absolute inset-0 z-0 brightness-50 animate-fade-in" 
+          src={heroImages[currentHeroImage].src}
+          data-ai-hint={heroImages[currentHeroImage].hint}
+          layout="fill"
+          objectFit="cover"
+          alt="Hero background"
+          className="absolute inset-0 z-0 brightness-50 animate-fade-in"
         />
         <div className="relative z-10 p-4">
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold font-headline mb-4 animate-fade-in-down">
@@ -260,5 +260,3 @@ export default function Home() {
     </div>
   );
 }
-
-    
