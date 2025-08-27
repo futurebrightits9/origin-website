@@ -19,7 +19,6 @@ const formSchema = z.object({
   name: z.string().min(2, "Name must be at least 2 characters."),
   gmail: z.string().email("Please enter a valid email address."),
   contactNumber: z.string().min(10, "Please enter a valid 10-digit contact number.").max(15),
-  purpose: z.enum(['Development Work', 'Training']),
   courseInterestedIn: z.enum(['Python', 'GenAI', 'DevOps', 'DSA', 'Data Science', 'Soft Skills']),
   messageQuery: z.string().min(10, "Message must be at least 10 characters.").max(500, "Message must not exceed 500 characters."),
 });
@@ -50,13 +49,10 @@ export function ContactForm() {
       name: "",
       gmail: "",
       contactNumber: "",
-      purpose: "Training",
       courseInterestedIn: "Python",
       messageQuery: "",
     },
   });
-
-  const purpose = form.watch("purpose");
 
   const action = async (formData: FormData) => {
     const result = await generateLearningPathAction(formData);
@@ -111,54 +107,32 @@ export function ContactForm() {
             </FormItem>
           )}
         />
+        
         <FormField
           control={form.control}
-          name="purpose"
+          name="courseInterestedIn"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Purpose</FormLabel>
+              <FormLabel>Course Interested In</FormLabel>
               <Select onValueChange={field.onChange} defaultValue={field.value}>
                 <FormControl>
                   <SelectTrigger>
-                    <SelectValue placeholder="Select a purpose" />
+                    <SelectValue placeholder="Select a course" />
                   </SelectTrigger>
                 </FormControl>
                 <SelectContent>
-                  <SelectItem value="Development Work">Development Work</SelectItem>
-                  <SelectItem value="Training">Training</SelectItem>
+                  <SelectItem value="Python">Python</SelectItem>
+                  <SelectItem value="GenAI">GenAI</SelectItem>
+                  <SelectItem value="DevOps">DevOps</SelectItem>
+                  <SelectItem value="DSA">DSA</SelectItem>
+                  <SelectItem value="Data Science">Data Science</SelectItem>
+                  <SelectItem value="Soft Skills">Soft Skills</SelectItem>
                 </SelectContent>
               </Select>
               <FormMessage />
             </FormItem>
           )}
         />
-        {purpose === 'Training' && (
-            <FormField
-              control={form.control}
-              name="courseInterestedIn"
-              render={({ field }) => (
-                <FormItem>
-                  <FormLabel>Course Interested In</FormLabel>
-                  <Select onValueChange={field.onChange} defaultValue={field.value}>
-                    <FormControl>
-                      <SelectTrigger>
-                        <SelectValue placeholder="Select a course" />
-                      </SelectTrigger>
-                    </FormControl>
-                    <SelectContent>
-                      <SelectItem value="Python">Python</SelectItem>
-                      <SelectItem value="GenAI">GenAI</SelectItem>
-                      <SelectItem value="DevOps">DevOps</SelectItem>
-                      <SelectItem value="DSA">DSA</SelectItem>
-                      <SelectItem value="Data Science">Data Science</SelectItem>
-                      <SelectItem value="Soft Skills">Soft Skills</SelectItem>
-                    </SelectContent>
-                  </Select>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
-        )}
         <FormField
           control={form.control}
           name="messageQuery"

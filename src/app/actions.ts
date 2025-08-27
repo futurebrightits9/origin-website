@@ -8,7 +8,6 @@ const formSchema = z.object({
   name: z.string().min(2, "Name must be at least 2 characters."),
   gmail: z.string().email("Please enter a valid email address."),
   contactNumber: z.string().min(10, "Please enter a valid 10-digit contact number.").max(15),
-  purpose: z.enum(['Development Work', 'Training']),
   courseInterestedIn: z.enum(['Python', 'GenAI', 'DevOps', 'DSA', 'Data Science', 'Soft Skills']),
   messageQuery: z.string().min(10, "Message must be at least 10 characters.").max(500, "Message must not exceed 500 characters."),
 });
@@ -18,33 +17,14 @@ export async function generateLearningPathAction(formData: FormData) {
     candidateName: formData.get('name'),
     candidateGmail: formData.get('gmail'),
     candidateContactNumber: formData.get('contactNumber'),
-    purpose: formData.get('purpose'),
     courseInterestedIn: formData.get('courseInterestedIn'),
     messageQuery: formData.get('messageQuery'),
   };
   
-  // Refine schema based on purpose
-  const refinedSchema = formSchema.superRefine((data, ctx) => {
-    if (data.purpose === 'Development Work') {
-      // courseInterestedIn is not required for development work
-      return;
-    }
-    if (!data.courseInterestedIn) {
-      ctx.addIssue({
-        code: z.ZodIssueCode.invalid_enum_value,
-        path: ['courseInterestedIn'],
-        message: 'Please select a course.',
-        expected: ['Python', 'GenAI', 'DevOps', 'DSA', 'Data Science', 'Soft Skills'],
-        received: data.courseInterestedIn
-      });
-    }
-  });
-
-  const validationResult = refinedSchema.safeParse({
+  const validationResult = formSchema.safeParse({
     name: rawFormData.candidateName,
     gmail: rawFormData.candidateGmail,
     contactNumber: rawFormData.candidateContactNumber,
-    purpose: rawFormData.purpose,
     courseInterestedIn: rawFormData.courseInterestedIn,
     messageQuery: rawFormData.messageQuery,
   });
@@ -58,7 +38,7 @@ export async function generateLearningPathAction(formData: FormData) {
     candidateName: validationResult.data.name,
     candidateGmail: validationResult.data.gmail,
     candidateContactNumber: validationResult.data.contactNumber,
-    purpose: validationResult.data.purpose,
+    purpose: "Training", // Always "Training" now
     courseInterestedIn: validationResult.data.courseInterestedIn,
     messageQuery: validationResult.data.messageQuery,
   };
