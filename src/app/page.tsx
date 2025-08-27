@@ -69,7 +69,7 @@ export default function Home() {
 
     const imageTimer = setInterval(() => {
       setCurrentHeroImage((prev) => (prev + 1) % heroImages.length);
-    }, 2000);
+    }, 4000);
 
     return () => {
         clearInterval(taglineTimer);
