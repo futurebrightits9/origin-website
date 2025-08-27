@@ -1,8 +1,7 @@
 
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
-import { Check, Code } from 'lucide-react';
-import Image from 'next/image';
+import { Check, Code, Globe } from 'lucide-react';
 
 const trainingPrograms = [
   { title: "Python Development", description: "Learn Python from basics to advanced with real-world projects." },
@@ -27,7 +26,7 @@ export default function ServicesPage() {
           </p>
         </div>
 
-        <div className="mb-24">
+        <div className="mb-24 grid grid-cols-1 lg:grid-cols-2 gap-12">
           <div className="space-y-6">
             <div className="flex items-center gap-4">
                 <div className="bg-primary/10 p-3 rounded-full">
@@ -54,6 +53,35 @@ export default function ServicesPage() {
                 <li className="flex items-center text-lg">
                   <Check className="h-6 w-6 text-green-500 mr-3 shrink-0" />
                   <span>End-to-end development and support.</span>
+                </li>
+            </ul>
+          </div>
+          <div className="space-y-6">
+            <div className="flex items-center gap-4">
+                <div className="bg-primary/10 p-3 rounded-full">
+                  <Globe className="h-8 w-8 text-primary" />
+                </div>
+              <h2 className="text-3xl md:text-4xl font-bold font-headline">Web Design & Development</h2>
+            </div>
+            <p className="text-lg text-muted-foreground">
+              We create stunning, responsive, and user-friendly websites that captivate your audience. Our designs are not only visually appealing but also optimized for performance and search engines.
+            </p>
+            <ul className="space-y-3 pl-2">
+                <li className="flex items-center text-lg">
+                  <Check className="h-6 w-6 text-green-500 mr-3 shrink-0" />
+                  <span>Responsive design for all devices.</span>
+                </li>
+                <li className="flex items-center text-lg">
+                  <Check className="h-6 w-6 text-green-500 mr-3 shrink-0" />
+                  <span>SEO-friendly architecture.</span>
+                </li>
+                <li className="flex items-center text-lg">
+                  <Check className="h-6 w-6 text-green-500 mr-3 shrink-0" />
+                  <span>E-commerce and CMS solutions.</span>
+                </li>
+                <li className="flex items-center text-lg">
+                  <Check className="h-6 w-6 text-green-500 mr-3 shrink-0" />
+                  <span>Ongoing maintenance and support.</span>
                 </li>
             </ul>
           </div>
