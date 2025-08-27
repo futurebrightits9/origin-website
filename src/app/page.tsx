@@ -48,10 +48,14 @@ const successStories = [
 ];
 
 const galleryImages = [
-  { src: "https://picsum.photos/600/400?random=1", alt: "Training session", hint: "students learning" },
-  { src: "https://picsum.photos/600/400?random=2", alt: "Workshop in progress", hint: "workshop classroom" },
-  { src: "https://picsum.photos/600/400?random=3", alt: "Seminar event", hint: "tech seminar" },
-  { src: "https://picsum.photos/600/400?random=4", alt: "Students collaborating", hint: "team collaboration" },
+  { src: "https://picsum.photos/600/400?random=1", alt: "IT office with employees", hint: "working office" },
+  { src: "https://picsum.photos/600/400?random=2", alt: "Developer at computer", hint: "developer coding" },
+  { src: "https://picsum.photos/600/400?random=3", alt: "Team meeting in office", hint: "team meeting" },
+  { src: "https://picsum.photos/600/400?random=4", alt: "Collaborating at desk", hint: "office collaboration" },
+  { src: "https://picsum.photos/600/400?random=5", alt: "Woman coding at desk", hint: "woman coding" },
+  { src: "https://picsum.photos/600/400?random=6", alt: "Office environment", hint: "tech office" },
+  { src: "https://picsum.photos/600/400?random=7", alt: "Brainstorming session", hint: "team brainstorming" },
+  { src: "https://picsum.photos/600/400?random=8", alt: "Employee working on laptop", hint: "laptop working" },
 ];
 
 const upcomingEvents = [
