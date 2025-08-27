@@ -38,7 +38,7 @@ const softwareDevelopmentItems = [
     {
         icon: Palette,
         text: "User-Centric Designs",
-        details: "We create designs that put users first, ensuring every interaction is simple, engaging, and meaningful.\n- Intuitive UI/UX – Simple, clean, and easy-to-navigate interfaces\n- Responsive Layouts – Works seamlessly on mobile, tablet, and desktop\n- Engaging Visuals – Modern designs that attract and retain users\n- Accessibility First – Inclusive design for all types of users\n- Performance Optimized – Fast-loading pages with smooth interactions\n- User Feedback Driven – Designs improved through testing & real feedback"
+        details: "We design with users in mind — simple, engaging, and seamless experiences.\n- Intuitive UI/UX – Clean & easy to use\n- Responsive Layouts – Mobile to desktop ready\n- Engaging Visuals – Modern & attractive\n- Accessible – Inclusive for all users\n- Optimized – Fast & smooth performance\n- Feedback Driven – Improved with real users"
     },
     {
         icon: Smartphone,
