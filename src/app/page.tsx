@@ -71,7 +71,7 @@ const itTrainingItems = [
     {
         icon: Star,
         text: "Career Guidance & Mock Interviews",
-        details: "Your career success is our goal. We provide comprehensive career support, including personalized guidance, resume building workshops, and mock interviews conducted by industry experts to help you build confidence and ace your job applications."
+        details: "We prepare you for the real job market with expert guidance and interview practice.\n- Personalized Career Counseling – Tailored advice for your career path\n- Resume Building – Crafting professional and impactful resumes\n- Mock Interviews – Real-time practice with industry experts\n- Confidence Boost – Overcome interview fear and present your best self"
     },
     {
         icon: Code,
@@ -178,7 +178,7 @@ export default function Home() {
                   <PopoverContent className="w-80 whitespace-pre-wrap">
                     <div className="grid gap-4">
                       <div className="space-y-2">
-                        {item.text === "Latest Technology Stack" || item.text === "User-Centric Designs" || item.text === "Cross-Platform Expertise" || item.text === "Quality Assurance & Testing" || item.text === "Affordable & Transparent Pricing" ? (
+                        {(item.text === "Latest Technology Stack" || item.text === "User-Centric Designs" || item.text === "Cross-Platform Expertise" || item.text === "Quality Assurance & Testing" || item.text === "Affordable & Transparent Pricing") ? (
                           <div className="text-sm text-muted-foreground">
                             <p className="text-foreground font-semibold">
                               {item.details.split('\n')[0]}
@@ -273,7 +273,3 @@ export default function Home() {
     </div>
   );
 }
-
-    
-
-    
