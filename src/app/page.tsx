@@ -5,7 +5,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { CheckCircle, Users, Code, Star, Mic, BookOpen, Award, Calendar, Camera, Palette, Smartphone, Globe, Cog, Search, DollarSign, Layers } from 'lucide-react';
+import { CheckCircle, Users, Code, Star, Palette, Smartphone, Layers, DollarSign } from 'lucide-react';
 
 const taglines = [
   "Empowering Students with Technology, Training & Transformation.",
@@ -34,8 +34,8 @@ const softwareDevelopmentItems = [
 const itTrainingItems = [
   { icon: Users, text: "Experienced Trainers from IT Industry" },
   { icon: Code, text: "100% Practical-Oriented Training" },
-  { icon: Award, text: "Career Guidance & Mock Interviews" },
-  { icon: BookOpen, text: "Hands-on Live Projects" },
+  { icon: Star, text: "Career Guidance & Mock Interviews" },
+  { icon: Code, text: "Hands-on Live Projects" },
   { icon: Star, text: "Placement Support" },
 ];
 
@@ -58,11 +58,6 @@ const galleryImages = [
   { src: "https://picsum.photos/600/400?random=8", alt: "Employee working on laptop", hint: "laptop working" },
 ];
 
-const upcomingEvents = [
-  { title: "Annual Hackathon 'Code-Fest 2024'", date: "December 15, 2024" },
-  { title: "Workshop on Advanced Prompt Engineering", date: "January 5, 2025" },
-  { title: "Career Guidance Session with Industry Experts", date: "January 20, 2025" },
-];
 
 export default function Home() {
   const [currentTagline, setCurrentTagline] = useState(0);
@@ -178,25 +173,6 @@ export default function Home() {
                  <Image src={image.src} data-ai-hint={image.hint} width={600} height={400} alt={image.alt} className="w-full h-full object-cover transform hover:scale-110 transition-transform duration-500" />
               </div>
             ))}
-          </div>
-        </div>
-      </section>
-
-      <section id="events" className="py-16 md:py-24 bg-card">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl md:text-4xl font-bold font-headline text-center mb-12">Upcoming Events</h2>
-          <div className="max-w-2xl mx-auto">
-            <ul className="space-y-4">
-              {upcomingEvents.map((event, index) => (
-                <li key={index} className="p-4 border rounded-lg flex items-center gap-4 hover:bg-secondary transition-colors duration-200">
-                  <Calendar className="h-6 w-6 text-primary" />
-                  <div>
-                    <p className="font-semibold">{event.title}</p>
-                    <p className="text-sm text-muted-foreground">{event.date}</p>
-                  </div>
-                </li>
-              ))}
-            </ul>
           </div>
         </div>
       </section>
