@@ -43,7 +43,7 @@ const softwareDevelopmentItems = [
     {
         icon: Smartphone,
         text: "Cross-Platform Expertise",
-        details: "We build applications that work seamlessly across all devices and platforms. Whether it's a responsive website or a mobile app for iOS and Android, our cross-platform development approach ensures a consistent and optimal experience for all users, maximizing your reach."
+        details: "We build applications that work seamlessly across all devices and platforms.\n- Unified Experience – Consistent look & feel everywhere\n- Multi-Device Ready – Websites, apps, and software for all platforms\n- Seamless Integration – Smooth data flow across devices\n- Wider Reach – Engage users on Android, iOS, and web"
     },
     {
         icon: CheckCircle,
@@ -178,7 +178,7 @@ export default function Home() {
                   <PopoverContent className="w-80 whitespace-pre-wrap">
                     <div className="grid gap-4">
                       <div className="space-y-2">
-                        {item.text === "Latest Technology Stack" || item.text === "User-Centric Designs" ? (
+                        {item.text === "Latest Technology Stack" || item.text === "User-Centric Designs" || item.text === "Cross-Platform Expertise" ? (
                           <div className="text-sm text-muted-foreground">
                             <p className="text-foreground font-semibold">
                               {item.details.split('\n')[0]}
