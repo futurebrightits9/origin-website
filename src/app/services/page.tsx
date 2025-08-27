@@ -60,7 +60,7 @@ export default function ServicesPage() {
             </div>
             <div>
               <Image 
-                src="https://picsum.photos/600/500" 
+                src="https://storage.googleapis.com/aai-web-samples/custom-software-development.png" 
                 data-ai-hint="software development"
                 alt="Custom Software Development" 
                 width={600} 
