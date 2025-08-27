@@ -9,7 +9,7 @@ export default function ContactPage() {
     <div className="py-16 md:py-24">
       <div className="container mx-auto px-4 relative">
         <div className="absolute top-0 right-4 flex gap-4">
-          <Button asChild variant="outline">
+          <Button asChild>
             <Link href="#development-query">
               <Code className="mr-2" /> For Development Work
             </Link>
