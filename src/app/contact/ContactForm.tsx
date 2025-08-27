@@ -88,7 +88,7 @@ export function ContactForm() {
           name="candidateGmail"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Candidate Gmail</FormLabel>
+              <FormLabel>Gmail</FormLabel>
               <FormControl>
                 <Input placeholder="e.g. john.doe@gmail.com" {...field} />
               </FormControl>
@@ -101,7 +101,7 @@ export function ContactForm() {
           name="candidateContactNumber"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Candidate Contact Number</FormLabel>
+              <FormLabel>Contact Number</FormLabel>
               <FormControl>
                 <Input placeholder="e.g. 9876543210" {...field} />
               </FormControl>
