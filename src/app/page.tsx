@@ -110,6 +110,7 @@ const galleryImages = [
 export default function Home() {
   const [currentTagline, setCurrentTagline] = useState(0);
   const [currentHeroImage, setCurrentHeroImage] = useState(0);
+  const [openPopover, setOpenPopover] = useState<string | null>(null);
 
   useEffect(() => {
     const taglineTimer = setInterval(() => {
@@ -161,16 +162,18 @@ export default function Home() {
             <h3 className="text-2xl font-bold text-center mb-6 text-foreground">For Software & Website Development</h3>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
               {softwareDevelopmentItems.map((item, index) => (
-                <Popover key={index}>
+                <Popover key={item.text} open={openPopover === item.text} onOpenChange={(isOpen) => setOpenPopover(isOpen ? item.text : null)}>
                   <PopoverTrigger asChild>
-                    <Card className="text-center p-4 hover:shadow-xl hover:-translate-y-2 transition-all duration-300 cursor-pointer">
-                      <CardHeader className="flex flex-col items-center">
-                        <div className="bg-primary/10 p-3 rounded-full mb-3">
-                          <item.icon className="h-8 w-8 text-primary" />
-                        </div>
-                        <CardTitle className="font-headline text-lg leading-tight">{item.text}</CardTitle>
-                      </CardHeader>
-                    </Card>
+                    <div onMouseEnter={() => setOpenPopover(item.text)} onMouseLeave={() => setOpenPopover(null)}>
+                      <Card className="text-center p-4 hover:shadow-xl hover:-translate-y-2 transition-all duration-300 cursor-pointer h-full">
+                        <CardHeader className="flex flex-col items-center">
+                          <div className="bg-primary/10 p-3 rounded-full mb-3">
+                            <item.icon className="h-8 w-8 text-primary" />
+                          </div>
+                          <CardTitle className="font-headline text-lg leading-tight">{item.text}</CardTitle>
+                        </CardHeader>
+                      </Card>
+                    </div>
                   </PopoverTrigger>
                   <PopoverContent className="w-80 whitespace-pre-wrap">
                     <div className="grid gap-4">
@@ -191,17 +194,19 @@ export default function Home() {
             <h3 className="text-2xl font-bold text-center mb-6 text-foreground">For IT Training</h3>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
               {itTrainingItems.map((item, index) => (
-                 <Popover key={index}>
-                  <PopoverTrigger asChild>
-                    <Card className="text-center p-4 hover:shadow-xl hover:-translate-y-2 transition-all duration-300 cursor-pointer">
-                      <CardHeader className="flex flex-col items-center">
-                        <div className="bg-primary/10 p-3 rounded-full mb-3">
-                          <item.icon className="h-8 w-8 text-primary" />
-                        </div>
-                        <CardTitle className="font-headline text-lg leading-tight">{item.text}</CardTitle>
-                      </CardHeader>
-                    </Card>
-                  </PopoverTrigger>
+                 <Popover key={item.text} open={openPopover === item.text} onOpenChange={(isOpen) => setOpenPopover(isOpen ? item.text : null)}>
+                    <PopoverTrigger asChild>
+                      <div onMouseEnter={() => setOpenPopover(item.text)} onMouseLeave={() => setOpenPopover(null)}>
+                        <Card className="text-center p-4 hover:shadow-xl hover:-translate-y-2 transition-all duration-300 cursor-pointer h-full">
+                          <CardHeader className="flex flex-col items-center">
+                            <div className="bg-primary/10 p-3 rounded-full mb-3">
+                              <item.icon className="h-8 w-8 text-primary" />
+                            </div>
+                            <CardTitle className="font-headline text-lg leading-tight">{item.text}</CardTitle>
+                          </CardHeader>
+                        </Card>
+                      </div>
+                    </PopoverTrigger>
                   <PopoverContent className="w-80 whitespace-pre-wrap">
                     <div className="grid gap-4">
                       <div className="space-y-2">
@@ -255,3 +260,5 @@ export default function Home() {
     </div>
   );
 }
+
+    
