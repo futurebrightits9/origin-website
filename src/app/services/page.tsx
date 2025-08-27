@@ -1,7 +1,7 @@
 
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
-import { Check, Code, Globe } from 'lucide-react';
+import { Check, Code, Globe, Smartphone, BarChart, PenTool } from 'lucide-react';
 
 const trainingPrograms = [
   { title: "Python Development", description: "Learn Python from basics to advanced with real-world projects." },
@@ -26,65 +26,96 @@ export default function ServicesPage() {
           </p>
         </div>
 
-        <div className="mb-24 grid grid-cols-1 lg:grid-cols-2 gap-12">
-          <div className="space-y-6">
-            <div className="flex items-center gap-4">
-                <div className="bg-primary/10 p-3 rounded-full">
-                  <Code className="h-8 w-8 text-primary" />
+        <div className="mb-24 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {/* Custom Software Development Card */}
+            <div className="bg-card p-6 rounded-lg shadow-sm hover:shadow-lg transition-shadow duration-300">
+                <div className="flex items-center gap-4 mb-4">
+                    <div className="bg-primary/10 p-3 rounded-full">
+                        <Code className="h-8 w-8 text-primary" />
+                    </div>
+                    <h2 className="text-2xl font-bold font-headline">Custom Software Development</h2>
                 </div>
-              <h2 className="text-3xl md:text-4xl font-bold font-headline">Custom Software Development</h2>
+                <p className="text-muted-foreground mb-4">
+                    We build bespoke software solutions tailored to your unique business needs, from concept to deployment.
+                </p>
+                <ul className="space-y-2 text-sm text-muted-foreground">
+                    <li className="flex items-center"><Check className="h-4 w-4 text-green-500 mr-2 shrink-0" />Tailored to your requirements.</li>
+                    <li className="flex items-center"><Check className="h-4 w-4 text-green-500 mr-2 shrink-0" />Built with modern technology.</li>
+                    <li className="flex items-center"><Check className="h-4 w-4 text-green-500 mr-2 shrink-0" />User-centric design focus.</li>
+                </ul>
             </div>
-            <p className="text-lg text-muted-foreground">
-              We build bespoke software solutions tailored to your unique business needs. From initial concept to final deployment, we create scalable, secure, and high-performance applications that drive growth and efficiency.
-            </p>
-            <ul className="space-y-3 pl-2">
-                <li className="flex items-center text-lg">
-                  <Check className="h-6 w-6 text-green-500 mr-3 shrink-0" />
-                  <span>Tailored to your specific requirements.</span>
-                </li>
-                <li className="flex items-center text-lg">
-                  <Check className="h-6 w-6 text-green-500 mr-3 shrink-0" />
-                  <span>Built with modern, scalable technology.</span>
-                </li>
-                <li className="flex items-center text-lg">
-                  <Check className="h-6 w-6 text-green-500 mr-3 shrink-0" />
-                  <span>Focused on user-centric design and experience.</span>
-                </li>
-                <li className="flex items-center text-lg">
-                  <Check className="h-6 w-6 text-green-500 mr-3 shrink-0" />
-                  <span>End-to-end development and support.</span>
-                </li>
-            </ul>
-          </div>
-          <div className="space-y-6">
-            <div className="flex items-center gap-4">
-                <div className="bg-primary/10 p-3 rounded-full">
-                  <Globe className="h-8 w-8 text-primary" />
+
+            {/* Web Design & Development Card */}
+            <div className="bg-card p-6 rounded-lg shadow-sm hover:shadow-lg transition-shadow duration-300">
+                <div className="flex items-center gap-4 mb-4">
+                    <div className="bg-primary/10 p-3 rounded-full">
+                        <Globe className="h-8 w-8 text-primary" />
+                    </div>
+                    <h2 className="text-2xl font-bold font-headline">Web Design & Development</h2>
                 </div>
-              <h2 className="text-3xl md:text-4xl font-bold font-headline">Web Design & Development</h2>
+                <p className="text-muted-foreground mb-4">
+                    We create stunning, responsive websites optimized for performance and search engines.
+                </p>
+                <ul className="space-y-2 text-sm text-muted-foreground">
+                    <li className="flex items-center"><Check className="h-4 w-4 text-green-500 mr-2 shrink-0" />Responsive for all devices.</li>
+                    <li className="flex items-center"><Check className="h-4 w-4 text-green-500 mr-2 shrink-0" />SEO-friendly architecture.</li>
+                    <li className="flex items-center"><Check className="h-4 w-4 text-green-500 mr-2 shrink-0" />E-commerce & CMS solutions.</li>
+                </ul>
             </div>
-            <p className="text-lg text-muted-foreground">
-              We create stunning, responsive, and user-friendly websites that captivate your audience. Our designs are not only visually appealing but also optimized for performance and search engines.
-            </p>
-            <ul className="space-y-3 pl-2">
-                <li className="flex items-center text-lg">
-                  <Check className="h-6 w-6 text-green-500 mr-3 shrink-0" />
-                  <span>Responsive design for all devices.</span>
-                </li>
-                <li className="flex items-center text-lg">
-                  <Check className="h-6 w-6 text-green-500 mr-3 shrink-0" />
-                  <span>SEO-friendly architecture.</span>
-                </li>
-                <li className="flex items-center text-lg">
-                  <Check className="h-6 w-6 text-green-500 mr-3 shrink-0" />
-                  <span>E-commerce and CMS solutions.</span>
-                </li>
-                <li className="flex items-center text-lg">
-                  <Check className="h-6 w-6 text-green-500 mr-3 shrink-0" />
-                  <span>Ongoing maintenance and support.</span>
-                </li>
-            </ul>
-          </div>
+
+            {/* Mobile App Development Card */}
+            <div className="bg-card p-6 rounded-lg shadow-sm hover:shadow-lg transition-shadow duration-300">
+                <div className="flex items-center gap-4 mb-4">
+                    <div className="bg-primary/10 p-3 rounded-full">
+                        <Smartphone className="h-8 w-8 text-primary" />
+                    </div>
+                    <h2 className="text-2xl font-bold font-headline">Mobile App Development</h2>
+                </div>
+                <p className="text-muted-foreground mb-4">
+                    Native and cross-platform mobile apps that deliver seamless user experiences on iOS and Android.
+                </p>
+                <ul className="space-y-2 text-sm text-muted-foreground">
+                    <li className="flex items-center"><Check className="h-4 w-4 text-green-500 mr-2 shrink-0" />iOS and Android expertise.</li>
+                    <li className="flex items-center"><Check className="h-4 w-4 text-green-500 mr-2 shrink-0" />Performance-optimized.</li>
+                    <li className="flex items-center"><Check className="h-4 w-4 text-green-500 mr-2 shrink-0" />Scalable & secure backends.</li>
+                </ul>
+            </div>
+
+            {/* UI/UX Design Card */}
+            <div className="bg-card p-6 rounded-lg shadow-sm hover:shadow-lg transition-shadow duration-300">
+                <div className="flex items-center gap-4 mb-4">
+                    <div className="bg-primary/10 p-3 rounded-full">
+                        <PenTool className="h-8 w-8 text-primary" />
+                    </div>
+                    <h2 className="text-2xl font-bold font-headline">UI/UX Design</h2>
+                </div>
+                <p className="text-muted-foreground mb-4">
+                    Crafting intuitive and engaging user interfaces that enhance user satisfaction and drive results.
+                </p>
+                <ul className="space-y-2 text-sm text-muted-foreground">
+                    <li className="flex items-center"><Check className="h-4 w-4 text-green-500 mr-2 shrink-0" />User research & wireframing.</li>
+                    <li className="flex items-center"><Check className="h-4 w-4 text-green-500 mr-2 shrink-0" />Interactive prototyping.</li>
+                    <li className="flex items-center"><Check className="h-4 w-4 text-green-500 mr-2 shrink-0" />Visually stunning mockups.</li>
+                </ul>
+            </div>
+
+            {/* Data Analytics & Business Intelligence Card */}
+            <div className="bg-card p-6 rounded-lg shadow-sm hover:shadow-lg transition-shadow duration-300">
+                <div className="flex items-center gap-4 mb-4">
+                    <div className="bg-primary/10 p-3 rounded-full">
+                        <BarChart className="h-8 w-8 text-primary" />
+                    </div>
+                    <h2 className="text-2xl font-bold font-headline">Data Analytics & BI</h2>
+                </div>
+                <p className="text-muted-foreground mb-4">
+                    Transforming raw data into actionable insights with powerful dashboards and reporting tools.
+                </p>
+                <ul className="space-y-2 text-sm text-muted-foreground">
+                    <li className="flex items-center"><Check className="h-4 w-4 text-green-500 mr-2 shrink-0" />Data visualization dashboards.</li>
+                    <li className="flex items-center"><Check className="h-4 w-4 text-green-500 mr-2 shrink-0" />Predictive analytics.</li>
+                    <li className="flex items-center"><Check className="h-4 w-4 text-green-500 mr-2 shrink-0" />Custom reporting solutions.</li>
+                </ul>
+            </div>
         </div>
         
         <Accordion type="single" collapsible defaultValue="item-1" className="w-full max-w-4xl mx-auto">
