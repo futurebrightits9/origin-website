@@ -1,6 +1,7 @@
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
-import { Check } from 'lucide-react';
+import { Check, Code } from 'lucide-react';
+import Image from 'next/image';
 
 const trainingPrograms = [
   { title: "Python Development", description: "Learn Python from basics to advanced with real-world projects." },
@@ -21,8 +22,53 @@ export default function ServicesPage() {
         <div className="text-center mb-16">
           <h1 className="text-4xl md:text-5xl font-bold font-headline mb-4">Our Programs & Services</h1>
           <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto">
-            We offer a comprehensive suite of training programs designed to make you industry-ready from day one.
+            We offer a comprehensive suite of training and development services designed to make you industry-ready.
           </p>
+        </div>
+
+        <div className="mb-24">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div className="space-y-6">
+              <div className="flex items-center gap-4">
+                 <div className="bg-primary/10 p-3 rounded-full">
+                    <Code className="h-8 w-8 text-primary" />
+                  </div>
+                <h2 className="text-3xl md:text-4xl font-bold font-headline">Custom Software Development</h2>
+              </div>
+              <p className="text-lg text-muted-foreground">
+                We build bespoke software solutions tailored to your unique business needs. From initial concept to final deployment, we create scalable, secure, and high-performance applications that drive growth and efficiency.
+              </p>
+              <ul className="space-y-3 pl-2">
+                 <li className="flex items-center text-lg">
+                    <Check className="h-6 w-6 text-green-500 mr-3 shrink-0" />
+                    <span>Tailored to your specific requirements.</span>
+                  </li>
+                  <li className="flex items-center text-lg">
+                    <Check className="h-6 w-6 text-green-500 mr-3 shrink-0" />
+                    <span>Built with modern, scalable technology.</span>
+                  </li>
+                  <li className="flex items-center text-lg">
+                    <Check className="h-6 w-6 text-green-500 mr-3 shrink-0" />
+                    <span>Focused on user-centric design and experience.</span>
+                  </li>
+                  <li className="flex items-center text-lg">
+                    <Check className="h-6 w-6 text-green-500 mr-3 shrink-0" />
+                    <span>End-to-end development and support.</span>
+                  </li>
+              </ul>
+            </div>
+            <div className="relative h-96 w-full flex items-center justify-center">
+                <div className="absolute w-full h-full bg-accent/20 rounded-[30%_70%_70%_30%_/_30%_30%_70%_70%] rotate-12 animate-pulse" />
+                <Image
+                  src="https://picsum.photos/800/600?random=15"
+                  data-ai-hint="software development"
+                  alt="Custom Software Development"
+                  width={800}
+                  height={600}
+                  className="rounded-2xl object-cover shadow-2xl relative z-10 w-5/6 h-auto"
+                />
+            </div>
+          </div>
         </div>
         
         <Accordion type="single" collapsible defaultValue="item-1" className="w-full max-w-4xl mx-auto">
