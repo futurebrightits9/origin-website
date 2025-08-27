@@ -80,46 +80,49 @@ export default function ServicesPage() {
                         <li className="flex items-center"><Check className="h-4 w-4 text-green-500 mr-2 shrink-0" />Scalable & secure backends.</li>
                     </ul>
                 </div>
-
-                {/* UI/UX Design Card */}
-                <div className="bg-card p-6 rounded-lg shadow-sm hover:shadow-lg transition-shadow duration-300">
-                    <div className="flex items-center gap-4 mb-4">
-                        <div className="bg-primary/10 p-3 rounded-full">
-                            <PenTool className="h-8 w-8 text-primary" />
+            </div>
+             <div className="mt-8 flex justify-start">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    {/* UI/UX Design Card */}
+                    <div className="bg-card p-6 rounded-lg shadow-sm hover:shadow-lg transition-shadow duration-300">
+                        <div className="flex items-center gap-4 mb-4">
+                            <div className="bg-primary/10 p-3 rounded-full">
+                                <PenTool className="h-8 w-8 text-primary" />
+                            </div>
+                            <h2 className="text-2xl font-bold font-headline">UI/UX Design</h2>
                         </div>
-                        <h2 className="text-2xl font-bold font-headline">UI/UX Design</h2>
+                        <p className="text-muted-foreground mb-4">
+                            Crafting intuitive and engaging user interfaces that enhance user satisfaction and drive results.
+                        </p>
+                        <ul className="space-y-2 text-sm text-muted-foreground">
+                            <li className="flex items-center"><Check className="h-4 w-4 text-green-500 mr-2 shrink-0" />User research & wireframing.</li>
+                            <li className="flex items-center"><Check className="h-4 w-4 text-green-500 mr-2 shrink-0" />Interactive prototyping.</li>
+                            <li className="flex items-center"><Check className="h-4 w-4 text-green-500 mr-2 shrink-0" />Visually stunning mockups.</li>
+                        </ul>
                     </div>
-                    <p className="text-muted-foreground mb-4">
-                        Crafting intuitive and engaging user interfaces that enhance user satisfaction and drive results.
-                    </p>
-                    <ul className="space-y-2 text-sm text-muted-foreground">
-                        <li className="flex items-center"><Check className="h-4 w-4 text-green-500 mr-2 shrink-0" />User research & wireframing.</li>
-                        <li className="flex items-center"><Check className="h-4 w-4 text-green-500 mr-2 shrink-0" />Interactive prototyping.</li>
-                        <li className="flex items-center"><Check className="h-4 w-4 text-green-500 mr-2 shrink-0" />Visually stunning mockups.</li>
-                    </ul>
-                </div>
 
-                {/* Data Analytics & Business Intelligence Card */}
-                <div className="bg-card p-6 rounded-lg shadow-sm hover:shadow-lg transition-shadow duration-300">
-                    <div className="flex items-center gap-4 mb-4">
-                        <div className="bg-primary/10 p-3 rounded-full">
-                            <BarChart className="h-8 w-8 text-primary" />
+                    {/* Data Analytics & Business Intelligence Card */}
+                    <div className="bg-card p-6 rounded-lg shadow-sm hover:shadow-lg transition-shadow duration-300">
+                        <div className="flex items-center gap-4 mb-4">
+                            <div className="bg-primary/10 p-3 rounded-full">
+                                <BarChart className="h-8 w-8 text-primary" />
+                            </div>
+                            <h2 className="text-2xl font-bold font-headline">Data Analytics & BI</h2>
                         </div>
-                        <h2 className="text-2xl font-bold font-headline">Data Analytics & BI</h2>
+                        <p className="text-muted-foreground mb-4">
+                            Transforming raw data into actionable insights with powerful dashboards and reporting tools.
+                        </p>
+                        <ul className="space-y-2 text-sm text-muted-foreground">
+                            <li className="flex items-center"><Check className="h-4 w-4 text-green-500 mr-2 shrink-0" />Data visualization dashboards.</li>
+                            <li className="flex items-center"><Check className="h-4 w-4 text-green-500 mr-2 shrink-0" />Predictive analytics.</li>
+                            <li className="flex items-center"><Check className="h-4 w-4 text-green-500 mr-2 shrink-0" />Custom reporting solutions.</li>
+                        </ul>
                     </div>
-                    <p className="text-muted-foreground mb-4">
-                        Transforming raw data into actionable insights with powerful dashboards and reporting tools.
-                    </p>
-                    <ul className="space-y-2 text-sm text-muted-foreground">
-                        <li className="flex items-center"><Check className="h-4 w-4 text-green-500 mr-2 shrink-0" />Data visualization dashboards.</li>
-                        <li className="flex items-center"><Check className="h-4 w-4 text-green-500 mr-2 shrink-0" />Predictive analytics.</li>
-                        <li className="flex items-center"><Check className="h-4 w-4 text-green-500 mr-2 shrink-0" />Custom reporting solutions.</li>
-                    </ul>
                 </div>
             </div>
         </div>
         
-        <div className="w-full max-w-4xl mx-auto">
+        <div className="w-full">
           <h2 className="text-2xl font-headline font-bold text-center mb-8">🎓 Training Programs</h2>
           <Accordion type="single" collapsible className="w-full space-y-4">
             {trainingPrograms.map((program, index) => (
