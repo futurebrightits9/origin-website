@@ -45,7 +45,7 @@ export default function ContactPage() {
           </div>
           
           <div id="training-query" className="bg-card p-8 rounded-lg shadow-xl">
-             <h2 className="text-3xl font-bold font-headline mb-6">Get a Personalized Learning Path</h2>
+             <h2 className="text-3xl font-bold font-headline mb-6">Contact Form</h2>
             <ContactForm />
           </div>
         </div>
