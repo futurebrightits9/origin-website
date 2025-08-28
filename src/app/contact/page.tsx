@@ -1,5 +1,4 @@
 
-import { ContactForm } from './ContactForm';
 import { Mail, Phone, MapPin } from 'lucide-react';
 
 export default function ContactPage() {
@@ -45,10 +44,6 @@ export default function ContactPage() {
             </div>
           </div>
           
-          <div id="training-query" className="bg-card p-8 rounded-lg shadow-xl">
-             <h2 className="text-3xl font-bold font-headline mb-6">Contact Form</h2>
-            <ContactForm />
-          </div>
         </div>
       </div>
     </div>
