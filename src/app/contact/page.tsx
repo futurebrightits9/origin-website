@@ -1,5 +1,5 @@
-
 import { Mail, Phone, MapPin } from 'lucide-react';
+import { ContactForm } from './ContactForm';
 
 export default function ContactPage() {
   return (
@@ -12,7 +12,7 @@ export default function ContactPage() {
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
           <div className="space-y-8">
-            <h2 className="text-3xl font-bold font-headline">Contact Information</h2>
+            <h2 className="text-2xl font-bold font-headline">Contact Information</h2>
             <div className="flex items-start gap-4">
               <div className="bg-primary/10 p-3 rounded-full">
                 <Mail className="h-6 w-6 text-primary" />
@@ -42,6 +42,11 @@ export default function ContactPage() {
                 <p className="text-muted-foreground">Above Shree Cement, 7th Floor Business Bay JITO, Mumbai Naka, Nashik - 422001</p>
               </div>
             </div>
+          </div>
+
+          <div className="bg-card p-8 rounded-lg shadow-xl">
+             <h2 className="text-2xl font-bold font-headline mb-6">Send us a Message</h2>
+            <ContactForm />
           </div>
           
         </div>

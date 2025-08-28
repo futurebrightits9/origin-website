@@ -1,4 +1,3 @@
-
 "use client";
 
 import { useForm } from 'react-hook-form';
@@ -7,11 +6,10 @@ import { z } from 'zod';
 import { useFormStatus } from 'react-dom';
 import { useToast } from "@/hooks/use-toast"
 
-import { generateLearningPathAction } from '@/app/actions';
+import { submitContactForm } from '@/app/actions';
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
 import { Loader2 } from 'lucide-react';
 
@@ -19,7 +17,7 @@ const formSchema = z.object({
   name: z.string().min(2, "Name must be at least 2 characters."),
   gmail: z.string().email("Please enter a valid email address."),
   contactNumber: z.string().min(10, "Please enter a valid 10-digit contact number.").max(15),
-  courseInterestedIn: z.enum(['Python', 'GenAI', 'DevOps', 'DSA', 'Data Science', 'Soft Skills']),
+  visitingPurpose: z.string().min(3, "Purpose must be at least 3 characters."),
   messageQuery: z.string().min(10, "Message must be at least 10 characters.").max(500, "Message must not exceed 500 characters."),
 });
 
@@ -32,7 +30,7 @@ function SubmitButton() {
       {pending ? (
         <>
           <Loader2 className="mr-2 h-4 w-4 animate-spin" />
-          Generating Path...
+          Submitting...
         </>
       ) : (
         "Submit"
@@ -49,19 +47,25 @@ export function ContactForm() {
       name: "",
       gmail: "",
       contactNumber: "",
-      courseInterestedIn: "Python",
+      visitingPurpose: "",
       messageQuery: "",
     },
   });
 
   const action = async (formData: FormData) => {
-    const result = await generateLearningPathAction(formData);
+    const result = await submitContactForm(formData);
     if (result?.error) {
       toast({
         variant: "destructive",
         title: "Oh no! Something went wrong.",
         description: result.error,
       })
+    } else {
+        toast({
+            title: "Success!",
+            description: "Your message has been sent successfully.",
+        })
+        form.reset();
     }
   }
 
@@ -107,28 +111,15 @@ export function ContactForm() {
             </FormItem>
           )}
         />
-        
         <FormField
           control={form.control}
-          name="courseInterestedIn"
+          name="visitingPurpose"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Course Interested In</FormLabel>
-              <Select onValueChange={field.onChange} defaultValue={field.value}>
-                <FormControl>
-                  <SelectTrigger>
-                    <SelectValue placeholder="Select a course" />
-                  </SelectTrigger>
-                </FormControl>
-                <SelectContent>
-                  <SelectItem value="Python">Python</SelectItem>
-                  <SelectItem value="GenAI">GenAI</SelectItem>
-                  <SelectItem value="DevOps">DevOps</SelectItem>
-                  <SelectItem value="DSA">DSA</SelectItem>
-                  <SelectItem value="Data Science">Data Science</SelectItem>
-                  <SelectItem value="Soft Skills">Soft Skills</SelectItem>
-                </SelectContent>
-              </Select>
+              <FormLabel>Visiting Purpose</FormLabel>
+              <FormControl>
+                <Input placeholder="e.g. Training Inquiry, Business Meeting" {...field} />
+              </FormControl>
               <FormMessage />
             </FormItem>
           )}
@@ -138,9 +129,9 @@ export function ContactForm() {
           name="messageQuery"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Message / Query</FormLabel>
+              <FormLabel>Query / Message</FormLabel>
               <FormControl>
-                <Textarea placeholder="Tell us about your goals or any questions you have." {...field} />
+                <Textarea placeholder="Tell us how we can help." {...field} />
               </FormControl>
               <FormMessage />
             </FormItem>
