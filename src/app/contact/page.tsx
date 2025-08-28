@@ -1,5 +1,6 @@
 import { Mail, Phone, MapPin } from 'lucide-react';
 import { ContactForm } from './ContactForm';
+import Link from 'next/link';
 
 export default function ContactPage() {
   return (
@@ -44,18 +45,9 @@ export default function ContactPage() {
             </div>
 
             <div className="mt-8">
-              <h3 className="text-xl font-bold font-headline mb-4">Find us on the Map</h3>
-              <div className="aspect-w-16 aspect-h-9 rounded-lg overflow-hidden shadow-xl">
-                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3749.522271810577!2d73.7744389758782!3d19.98659192257088!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bddeb8d4a434b9d%3A0x854c609568916961!2sBUSINESS%20BAY%2C%20JITO!5e0!3m2!1sen!2sin!4v1722421369305!5m2!1sen!2sin"
-                  width="100%"
-                  height="350"
-                  style={{ border: 0 }}
-                  allowFullScreen={true}
-                  loading="lazy"
-                  referrerPolicy="no-referrer-when-downgrade"
-                ></iframe>
-              </div>
+              <Link href="https://www.google.com/maps/place/Business+Bay+JITO/@19.9907841,73.7773302,17z/data=!4m10!1m2!2m1!1sAbove+Shree+Cement,+7th+Floor+Business+Bay+JITO,+Mumbai+Naka,+Nashik+-+422001!3m6!1s0x3bddeb0e59adb13f:0xe36bfedcad19dd44!8m2!3d19.9907841!4d73.7799051!15sCk1BYm92ZSBTaHJlZSBDZW1lbnQsIDd0aCBGbG9vciBCdXNpbmVzcyBCYXkgSklUTywgTXVtYmFpIE5ha2EsIE5hc2hpayAtIDQyMjAwMSIDiAEBkgENYnVzaW5lc3NfcGFya-ABAA!16s%2Fg%2F11c32l8rjw?entry=ttu&g_ep=EgoyMDI1MDgyNS4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer" className="text-xl font-bold font-headline text-primary hover:underline">
+                Find us on the Map
+              </Link>
             </div>
           </div>
 
