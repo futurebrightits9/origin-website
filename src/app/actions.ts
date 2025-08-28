@@ -71,9 +71,9 @@ export async function submitContactForm(formData: FormData) {
   }
 
   try {
-    // Here you would typically send an email, save to a database, etc.
-    // For this example, we'll just log the data to the console.
-    console.log("New contact form submission:", validationResult.data);
+    const { name, gmail, contactNumber, visitingPurpose, messageQuery } = validationResult.data;
+    // Log data in a structured CSV format for easy copy-pasting into a spreadsheet
+    console.log(`New Contact Submission: "${name}","${gmail}","${contactNumber}","${visitingPurpose}","${messageQuery}"`);
     
     return { success: true };
   } catch (error) {

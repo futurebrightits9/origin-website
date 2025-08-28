@@ -62,8 +62,8 @@ export function ContactForm() {
       })
     } else {
         toast({
-            title: "Success!",
-            description: "Your message has been sent successfully.",
+            title: "Thank You!",
+            description: "Your message has been sent. We'll be in touch soon.",
         })
         form.reset();
     }
