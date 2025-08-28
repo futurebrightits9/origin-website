@@ -43,17 +43,6 @@ export default function ContactPage() {
                 <p className="text-muted-foreground">Above Shree Cement, 7th Floor Business Bay JITO, Mumbai Naka, Nashik - 422001</p>
               </div>
             </div>
-            <div className="mt-8 rounded-lg overflow-hidden shadow-xl">
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3749.537213217964!2d73.76993527499682!3d19.97554902241595!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bddec8d33a61ce1%3A0x21c25c3473f25608!2sBusiness%20Bay!5e0!3m2!1sen!2sin!4v1722426372151!5m2!1sen!2sin"
-                width="100%"
-                height="300"
-                style={{ border: 0 }}
-                allowFullScreen={true}
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-              ></iframe>
-            </div>
           </div>
           
           <div id="training-query" className="bg-card p-8 rounded-lg shadow-xl">
