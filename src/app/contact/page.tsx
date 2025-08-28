@@ -1,3 +1,4 @@
+
 import { ContactForm } from './ContactForm';
 import { Mail, Phone, MapPin } from 'lucide-react';
 
@@ -39,7 +40,7 @@ export default function ContactPage() {
               </div>
               <div>
                 <h3 className="font-semibold text-lg">Address</h3>
-                <p className="text-muted-foreground">123 Tech Park, Innovation Hub, Nashik, Maharashtra, 422001, India</p>
+                <p className="text-muted-foreground">Above Shree Cement, 7th Floor Business Bay JITO, Mumbai Naka, Nashik - 422001</p>
               </div>
             </div>
           </div>
